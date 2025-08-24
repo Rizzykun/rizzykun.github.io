@@ -19,7 +19,7 @@ subtitle = "Cybersecurity Learners & CTF Player."
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "img/avatar.jpg"
 
 [article]
 headingAnchor = false
@@ -28,7 +28,7 @@ readingTime = true
 
 [article.license]
 enabled = true
-default = "Created by Rizzykun"
+default = "Licensed under the GNU General Public License v3.0"
 
 ## Widgets
 [[widgets.homepage]]
