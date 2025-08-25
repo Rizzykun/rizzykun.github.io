@@ -19,7 +19,7 @@ subtitle = "Cybersecurity Nub & CTF Player"
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/favicon.jpg"
+src = "img/avatar.jpg"
 
 [article]
 headingAnchor = false
@@ -28,7 +28,7 @@ readingTime = true
 
 [article.license]
 enabled = true
-default = "Licensed under the GNU General Public License v3.0"
+default = "CC BY-NC-SA 4.0"
 
 ## Widgets
 [[widgets.homepage]]

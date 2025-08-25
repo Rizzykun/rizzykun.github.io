@@ -1,16 +1,40 @@
 ---
-title: Hello World
-description: Welcome to Hugo Theme Stack
+title: Introduction
+description: 
 slug: hello-world
-date: 2023-03-06 00:00:00+0000
-image: cover.jpg
-categories:
-    - Example Category
-tags:
-    - Example Tag
+date: 2024-09-05 00:00:00+0000
+image: welcome.png
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-Welcome to my website. This is my journey exploring the infinite adventures in this world!
+# 🎉 Welcome to My CTF Writeups!
 
-> Photo by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski) on [Unsplash](https://unsplash.com/)
+Hey there, Thanks for visiting my website 👋  
+
+I’ve finally decided to start documenting my **CTF (Capture The Flag)** journey! 🚩  
+I’m still a beginner (yes, expect some failure moments 🤦), but that’s exactly why this page exists — to **learn, share and laugh** along the way.  
+
+---
+
+## 💡 What to Expect Here  
+- Writeups of CTF challenges I’ve solved 🕵️  
+- My thought process (a.k.a. the chaos inside my head) 🤯  
+- Lessons learned, mistakes made and “aha!” moments ✨  
+- Resources, tips and little tricks that I pick up 📚  
+
+---
+
+## 🚀 Why I’m Doing This  
+CTFs can feel overwhelming at first, but they’re also **super fun and addictive**.  
+By writing everything down, I can track my progress and maybe even help another beginner who’s just starting out. 🌱  
+
+---
+
+## ⚡ Final Words  
+This is just the beginning of my adventure.  
+So grab some popcorn 🍿, join me in the rabbit hole 🐇, and let’s see how deep we can go.  
+
+👉 Stay tuned for the next writeup — and remember:  
+**Every flag is a small victory!** 🏁  
+
+---
