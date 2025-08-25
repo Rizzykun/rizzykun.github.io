@@ -34,7 +34,7 @@ We’re dealing with an online shoe store where you can:
     
 
 Pretty normal e-commerce flow, right? Or… is it? 👀
---- content/post/2025/whyctf/web/shoe_shop.md ---
+
 ![Image1](shoeshop.png)
 
 * * *
@@ -53,7 +53,7 @@ So let’s try checking **id #1 cart**:
 `https://shoe-shop-1.ctf.zone/index.php?page=cart&id=1`
 
 Bingo! 🎯 We just accessed another user’s cart. And guess who that is? Yep—the admin.
---- content/post/2025/whyctf/web/shoe_shop.md ---
+
 ![](shoeshop2.png)
 
 * * *
