@@ -35,7 +35,7 @@ We’re dealing with an online shoe store where you can:
 
 Pretty normal e-commerce flow, right? Or… is it? 👀
 
-![Image1](shoe-shop.png)
+![Image1](shoeshop.png)
 
 * * *
 
