@@ -35,7 +35,7 @@ We’re dealing with an online shoe store where you can:
 
 Pretty normal e-commerce flow, right? Or… is it? 👀
 
-![Image1](shoeshop.png)
+![Image1](../../../../../static/shoeshop.png)
 
 * * *
 
@@ -54,7 +54,7 @@ So let’s try checking **id #1 cart**:
 
 Bingo! 🎯 We just accessed another user’s cart. And guess who that is? Yep—the admin.
 
-![](https://book.cryptocat.me/ctf-writeups/~gitbook/image?url=https%3A%2F%2F2104974767-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F77j4CZSOdhmt4S1buKA5%252Fuploads%252Fgit-blob-d5a6e5f3d3c9af13518cdab9747aefe979226cc3%252F1.PNG%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=a2da0e39&sv=2)
+![](../../../../../static/shoeshop2.png)
 
 * * *
 
