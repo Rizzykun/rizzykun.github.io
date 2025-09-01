@@ -19,7 +19,7 @@ subtitle = "Cybersecurity Nub & CTF Player"
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.jpg"
+src = "img/favicon.jpg"
 
 [article]
 headingAnchor = false
