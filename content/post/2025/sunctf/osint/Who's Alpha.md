@@ -2,7 +2,7 @@
 title: "OSINT: Who's Alpha"
 description:
 date: 2025-08-25T09:14:47Z
-image: cd ..
+image: 
 math: 
 license: 
 hidden: false
@@ -12,6 +12,7 @@ tags:
     - osint
 categories:
     - sunctf25
+    - osint
 ---
 
 Chall details  
@@ -24,7 +25,7 @@ Chall details
 
 ---
 
-![Image1](1.png)
+![Image1](1.jpg)
 
 # 🕵️‍♂️ Solution
 From the [Investigation Report](https://github.com/Rizzykun/rizzykun.github.io/tree/master/content/post/2025/sunctf/osint/InvesigationPeport.pdf) given,  

@@ -12,6 +12,7 @@ tags:
     - web
 categories:
     - whyctf25
+    - web
 ---
 
 ## 📝 Description
