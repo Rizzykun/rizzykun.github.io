@@ -25,11 +25,13 @@ Chall details
 
 ---
 
-![Image1](1.jpg)
+Interestingly this chall only had 4 out of 81 teams that were able to solve it in time.
 
 # 🕵️‍♂️ Solution
 From the [Investigation Report](https://github.com/Rizzykun/rizzykun.github.io/blob/master/content/post/2025/sunctf/osint/InvesigationReport.pdf) given,  
 The only lead we have is the social media account of a user named **Bravo**. That’s where the OSINT trail begins..
+
+![Image1](1.jpg)
 
 ---
 
@@ -55,13 +57,13 @@ The Drive contained:
 
 ![Image4](4.png)  
 
-Opening the note revealed a **password hint**: it was a combination of Bravo’s mother’s name and an important day (the day he signed a **RM10,000 contract**). Both details can be found in his X posts.  
-
-![Image5](5.png)  
+Opening the note revealed a **password hint**: it was a combination of Bravo’s mother’s name and an important day (the day he signed a **RM10,000 contract**). Both details can be found in his X posts.   
 
 ---
 
 ## Unlocking the Zip
+
+![Image5](5.png) 
 
 With the password reconstructed, I unzipped `Private.zip` to find intelligence on the **TigerP4tch** group. Inside Bravo’s folder, I finally uncovered a partial name:
 
@@ -85,7 +87,7 @@ After some digging, I located a Pastebin account under the username `Alice_R`. H
 
 ![Image7](7.png)  
 
-Back in the Google Drive folder full of logos, I noticed Alice’s shop logo prominently featuring a **rose**. The chat log mentioned the password is the flower on her shop logo. Trying **rose** as the password worked, unlocking the paste.  
+Back in the Google Drive folder full of logos, I noticed Alice’s shop logo featuring a **rose**. The chat log mentioned the password is the flower on her shop logo. Trying **rose** as the password worked, unlocking the paste.  
 
 ![Image8](8.png)  
 
@@ -93,7 +95,7 @@ Back in the Google Drive folder full of logos, I noticed Alice’s shop logo pro
 
 ## The Final Reveal
 
-The unlocked paste finally exposed Bravo’s full name:
+The unlocked paste finally exposed Alpha’s full name:
 
 > **Lucas Moore**
 
