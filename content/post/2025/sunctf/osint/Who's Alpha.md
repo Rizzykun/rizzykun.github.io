@@ -28,7 +28,7 @@ Chall details
 ![Image1](1.jpg)
 
 # 🕵️‍♂️ Solution
-From the [Investigation Report](https://github.com/Rizzykun/rizzykun.github.io/tree/master/content/post/2025/sunctf/osint/InvesigationPeport.pdf) given,  
+From the [Investigation Report](https://github.com/Rizzykun/rizzykun.github.io/blob/master/content/post/2025/sunctf/osint/InvesigationReport.pdf) given,  
 The only lead we have is the social media account of a user named **Bravo**. That’s where the OSINT trail begins..
 
 ---
