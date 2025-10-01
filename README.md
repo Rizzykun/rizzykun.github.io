@@ -67,3 +67,7 @@ Make sure also to specify Hugo version in the environment variable `HUGO_VERSION
 
 ![Environment variable](https://user-images.githubusercontent.com/5889006/156917212-afb7c70d-ab85-480f-8288-b15781a462c0.png)
 </details>
+
+git add .
+git commit -m "sibersiaga content added"
+git push origin master --force
