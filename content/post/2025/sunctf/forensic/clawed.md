@@ -10,8 +10,9 @@ comments: false
 draft: false
 tags: 
     - forensic
+    - sunwayctf25
 categories:
-    - sunctf25
+    
     - forensic
 ---
 
