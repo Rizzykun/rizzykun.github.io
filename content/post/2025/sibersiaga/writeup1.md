@@ -10,9 +10,9 @@ comments: false
 draft: false
 tags: 
     - osint
-    - sibersiaga25
-categories:
     
+categories:
+    - sibersiaga25
     - osint
 ---
 
