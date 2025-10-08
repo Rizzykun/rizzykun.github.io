@@ -2,7 +2,7 @@
 title: Introduction
 description: 
 slug: hello-world
-date: 2024-09-05 00:00:00+0000
+date: 2025-01-01 00:00:00+0000
 image: pokemon-pikachu.gif
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---

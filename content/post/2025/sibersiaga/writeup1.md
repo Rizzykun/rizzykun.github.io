@@ -10,11 +10,9 @@ comments: false
 draft: false
 tags: 
     - osint
-    - crypto
 categories:
-    - sunctf25
+    - sibersiaga25
     - osint
-    - crypto
 ---
 
 **
