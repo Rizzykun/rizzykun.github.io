@@ -1,7 +1,7 @@
 ---
 title: "Get Clawed"
 description:
-date: 2025-10-08T11:45:47Z
+date: 2025-10-07T11:45:47Z
 image: 
 math: 
 license: 

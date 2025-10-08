@@ -1,7 +1,7 @@
 ---
 title: "SOC Shift"
 description:
-date: 2025-10-08T11:45:47Z
+date: 2025-10-07T11:45:49Z
 image: 
 math: 
 license: 
