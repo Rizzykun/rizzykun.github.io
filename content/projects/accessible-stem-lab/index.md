@@ -2,6 +2,7 @@
 title: "Accessible STEM Laboratory"
 description: "Project-managed an eight-month proposal for a STEM lab serving visually impaired students, built around a sensory wall using touch, audio guidance and Braille. Gold Award."
 slug: accessible-stem-lab
+image: project__usrah-in-action-stem-lab__12.jpg
 date: 2026-06-16
 categories:
   - Community
@@ -28,6 +29,8 @@ The centrepiece of the proposed lab is a **sensory wall** — students explore
 mechanical, electronic and STEM tools through touch, audio guidance and
 Braille, rather than through a screen or a whiteboard.
 
+![Community service at the school](project__usrah-in-action-stem-lab__09.jpg)
+
 ## Community service, and why it mattered
 
 We also ran community service activities at the school. Spending time with the
@@ -43,3 +46,6 @@ toward the same goal.
 ## Outcome
 
 **Gold Award** at the project symposium.
+
+![Award presentation with the team](project__usrah-in-action-stem-lab__01.jpg)
+![Symposium group photo](project__usrah-in-action-stem-lab__12.jpg)

@@ -2,6 +2,7 @@
 title: "Context-Aware IDPS for Web Servers"
 description: "Final Year Project: combining intrusion detection and prevention with contextual awareness so a web server responds to threats on more than signatures alone. Silver Award at FYP 1 evaluation."
 slug: idps-web-servers
+image: project__fyp1-idps__02.jpg
 date: 2026-06-03
 categories:
   - Final Year Project
@@ -40,3 +41,7 @@ field we had only seen from the attacker's side.
 **Silver Award** at the FYP 1 project evaluation, 3–4 June 2026.
 
 FYP 2 continues the build.
+
+![Poster board with the live monitors](project__fyp1-idps__02.jpg)
+![At the FYP poster and demo setup](project__fyp1-idps__01.jpg)
+![With our supervisor and teammates](project__fyp1-idps__03.jpg)
