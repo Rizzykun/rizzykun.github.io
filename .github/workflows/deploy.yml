@@ -1,8 +1,11 @@
 name: Deploy to Github Pages
 
+# TEMPORARY: the live site is being served from the `redesign` branch so it
+# can be seen at the real URL before merging. To go back to normal, change
+# `redesign` to `master` in BOTH places below (here and the deploy guard).
 on:
     push:
-        branches: [master]
+        branches: [redesign]
     pull_request:
         branches: [master]
 
@@ -42,7 +45,11 @@ jobs:
             - name: Build
               run: hugo --minify --gc
 
+            # Pull requests build only. Without this guard a PR would publish
+            # its own build to gh-pages, so the live site would change before
+            # anything was reviewed or merged.
             - name: Deploy 🚀
+              if: github.event_name == 'push' && github.ref == 'refs/heads/redesign'
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: gh-pages

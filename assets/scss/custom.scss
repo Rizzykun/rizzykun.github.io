@@ -1,3 +1,848 @@
 /*
-    You can add your own custom styles here.
+*   Rizzykun — terminal theme for Hugo Theme Stack
+*
+*   Loaded last by the theme's style.scss, so everything here overrides the
+*   defaults. Organised as: tokens -> chrome -> content -> components.
 */
+
+/* ==========================================================================
+   1. Design tokens
+   ========================================================================== */
+
+:root {
+    /* Type */
+    --mono-font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    --base-font-family: "Inter", var(--sys-font-family), sans-serif;
+    --code-font-family: var(--mono-font-family);
+    --article-font-family: var(--base-font-family);
+    --article-line-height: 1.75;
+
+    /* Shape — flatter and tighter than the stock theme */
+    --card-border-radius: 8px;
+    --tag-border-radius: 4px;
+    --section-separation: 32px;
+
+    /* Light scheme */
+    --body-background: #eceff3;
+    --card-background: #ffffff;
+    --card-background-selected: #e8f5ee;
+
+    --accent-color: #0d7a4e;
+    --accent-color-darker: #0a5f3d;
+    --accent-color-text: #ffffff;
+
+    --body-text-color: #4a5560;
+    --card-text-color-main: #10161d;
+    --card-text-color-secondary: #4a5560;
+    --card-text-color-tertiary: #6b7684;
+    --card-separator-color: rgba(16, 22, 29, 0.09);
+    --card-border-color: rgba(16, 22, 29, 0.08);
+
+    --terminal-green: #0d7a4e;
+    --terminal-cyan: #0b6b8f;
+    --terminal-dim: rgba(16, 22, 29, 0.45);
+
+    /* Code blocks follow the scheme. The theme swaps in a light Chroma palette
+       under [data-scheme="light"], so the surface has to lighten with it or the
+       syntax colours land dark-on-dark. */
+    --pre-background-color: #f6f8fa;
+    --pre-text-color: #24292f;
+    --pre-chrome-background: #e8edf2;
+    --pre-chrome-border: rgba(16, 22, 29, 0.1);
+    --pre-gutter-color: rgba(16, 22, 29, 0.4);
+    --pre-button-border: rgba(16, 22, 29, 0.18);
+    --pre-button-color: rgba(16, 22, 29, 0.65);
+
+    --blockquote-background-color: rgba(13, 122, 78, 0.06);
+    --table-border-color: rgba(16, 22, 29, 0.12);
+    --tr-even-background-color: rgba(16, 22, 29, 0.03);
+
+    --scrollbar-thumb: rgba(16, 22, 29, 0.22);
+    --scrollbar-track: transparent;
+
+    /* Hairlines read better than drop shadows in a flat, dark-first design. */
+    --shadow-l1: 0 1px 2px rgba(16, 22, 29, 0.04);
+    --shadow-l2: 0 4px 16px rgba(16, 22, 29, 0.08);
+    --shadow-l3: 0 8px 28px rgba(16, 22, 29, 0.1);
+    --shadow-l4: 0 16px 48px rgba(16, 22, 29, 0.12);
+
+    &[data-scheme="dark"] {
+        --body-background: #0a0e13;
+        --card-background: #11171f;
+        --card-background-selected: rgba(61, 220, 132, 0.1);
+
+        --accent-color: #3ddc84;
+        --accent-color-darker: #6ee7a8;
+        --accent-color-text: #06120b;
+
+        --body-text-color: rgba(226, 236, 245, 0.62);
+        --card-text-color-main: #e2ecf5;
+        --card-text-color-secondary: rgba(226, 236, 245, 0.68);
+        --card-text-color-tertiary: rgba(226, 236, 245, 0.45);
+        --card-separator-color: rgba(226, 236, 245, 0.08);
+        --card-border-color: rgba(226, 236, 245, 0.09);
+
+        --terminal-green: #3ddc84;
+        --terminal-cyan: #56cffd;
+        --terminal-dim: rgba(226, 236, 245, 0.38);
+
+        --pre-background-color: #0c1117;
+        --pre-text-color: #e2ecf5;
+        --pre-chrome-background: #070b0f;
+        --pre-chrome-border: rgba(226, 236, 245, 0.08);
+        --pre-gutter-color: rgba(226, 236, 245, 0.35);
+        --pre-button-border: rgba(226, 236, 245, 0.18);
+        --pre-button-color: rgba(226, 236, 245, 0.7);
+
+        --blockquote-background-color: rgba(61, 220, 132, 0.07);
+        --table-border-color: rgba(226, 236, 245, 0.14);
+        --tr-even-background-color: rgba(226, 236, 245, 0.035);
+
+        --scrollbar-thumb: rgba(226, 236, 245, 0.18);
+
+        --shadow-l1: none;
+        --shadow-l2: none;
+        --shadow-l3: none;
+        --shadow-l4: none;
+    }
+}
+
+/* ==========================================================================
+   2. Page chrome
+   ========================================================================== */
+
+body {
+    background-color: var(--body-background);
+    /* A faint grid, the way a terminal sits on plotted paper. */
+    background-image: linear-gradient(var(--card-separator-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--card-separator-color) 1px, transparent 1px);
+    background-size: 64px 64px;
+    /* Deliberately not `background-attachment: fixed` — it forces a full
+       repaint on every scroll frame and is unreliable on mobile Safari. */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: var(--accent-color);
+    color: var(--accent-color-text);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Every surface gets a hairline instead of a shadow. */
+.main-article,
+.article-list article,
+.article-list--compact,
+.widget--archive,
+.widget--toc,
+.widget--search,
+.section-card {
+    border: 1px solid var(--card-border-color);
+}
+
+/* ==========================================================================
+   3. Sidebar / identity
+   ========================================================================== */
+
+.left-sidebar {
+    .site-meta {
+        gap: 6px;
+    }
+
+    .site-name {
+        font-family: var(--mono-font-family);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--card-text-color-main);
+
+        /* A prompt in front of the handle, a cursor behind it. */
+        &::before {
+            content: "~/";
+            color: var(--accent-color);
+            font-weight: 400;
+        }
+
+        &::after {
+            content: "_";
+            color: var(--accent-color);
+            animation: rk-blink 1.2s steps(2, start) infinite;
+        }
+    }
+
+    .site-description {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        color: var(--card-text-color-tertiary);
+        max-width: 34ch;
+    }
+
+    /* The theme resizes the avatar by width only, so feed it a square source
+       (assets/img/avatar.jpg) and let object-fit guard against a non-square one.
+       Selector depth matches the theme's own `.sidebar header .site-avatar
+       .site-logo`, so this wins on source order. */
+    header .site-avatar .site-logo {
+        border-radius: 10px;
+        border: 1px solid var(--card-border-color);
+        object-fit: cover;
+        box-shadow: none;
+        transition: border-color 0.25s ease;
+    }
+
+    &:hover header .site-avatar .site-logo {
+        border-color: var(--accent-color);
+    }
+}
+
+@keyframes rk-blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* Navigation reads like a file listing. */
+.menu {
+    li a {
+        font-family: var(--mono-font-family);
+        font-size: 1.45rem;
+        border-radius: 6px;
+        transition: color 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            color: var(--accent-color);
+            background-color: var(--card-background-selected);
+        }
+    }
+
+    .menu-social a:hover {
+        color: var(--accent-color);
+    }
+}
+
+/* ==========================================================================
+   4. Article cards
+   ========================================================================== */
+
+.article-list {
+    article {
+        transition: border-color 0.25s ease, transform 0.25s ease;
+
+        &:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Covers are screenshots, and the informative part of a screenshot is
+           almost always the top — anchor the crop there rather than centring. */
+        .article-image img {
+            object-position: top;
+            transition: transform 0.4s ease;
+        }
+
+        &:hover .article-image img {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.article-title {
+    font-family: var(--mono-font-family);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+
+    a {
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+}
+
+.article-subtitle {
+    font-size: 1.55rem;
+    line-height: 1.6;
+
+    @include respond(xl) {
+        font-size: 1.6rem;
+    }
+}
+
+.article-time,
+.article-time time,
+.article-time a,
+.article-lastmod {
+    font-family: var(--mono-font-family);
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   5. Categories and tags
+   ========================================================================== */
+
+/* Categories: solid chips. The `nth-child(n)` matches the specificity of the
+   theme's rotating palette so this wins on source order, without !important. */
+.article-list article:nth-child(n) .article-category a,
+.article-category a {
+    font-family: var(--mono-font-family);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    background: var(--accent-color);
+    color: var(--accent-color-text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        background: var(--accent-color-darker);
+        color: var(--accent-color-text);
+    }
+}
+
+/* Tags: bracketed and outlined — `[ osint ]`. */
+.article-tags a,
+.tagCloud-tags a {
+    font-family: var(--mono-font-family);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 5px 10px;
+    background: transparent;
+    color: var(--card-text-color-secondary);
+    border: 1px solid var(--card-border-color);
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+    &::before {
+        content: "[";
+        color: var(--terminal-dim);
+        margin-right: 4px;
+    }
+
+    &::after {
+        content: "]";
+        color: var(--terminal-dim);
+        margin-left: 4px;
+    }
+
+    &:hover {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+        background: var(--card-background-selected);
+
+        &::before,
+        &::after {
+            color: var(--accent-color);
+        }
+    }
+}
+
+/* ==========================================================================
+   6. Article page
+   ========================================================================== */
+
+.article-page .main-article {
+    .article-header .article-image img {
+        border-bottom: 1px solid var(--card-border-color);
+    }
+
+    .article-content {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--mono-font-family);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+            scroll-margin-top: 24px;
+        }
+
+        /* Section headings get a prompt marker rather than a heavy left border. */
+        h2 {
+            padding-left: 0;
+            border-left: 0;
+
+            &::before {
+                content: "##";
+                color: var(--accent-color);
+                font-weight: 400;
+                margin-right: 10px;
+                opacity: 0.75;
+            }
+        }
+
+        h3::before {
+            content: "###";
+            color: var(--accent-color);
+            font-weight: 400;
+            margin-right: 10px;
+            opacity: 0.6;
+        }
+
+        /* Inline code — flags, hashes, payloads. These carry the writeups.
+           Scoped with `:not(pre) >` so the chip treatment never lands on the
+           <code> elements inside a highlighted block (including the line-number
+           gutter, where it would paint a light box over the digits). */
+        :not(pre) > code {
+            font-family: var(--mono-font-family);
+            font-size: 0.88em;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: var(--card-background-selected);
+            color: var(--accent-color);
+            border: 1px solid var(--card-border-color);
+            word-break: break-word;
+        }
+
+        pre code {
+            background: none;
+            border: 0;
+            padding: 0;
+            color: unset;
+        }
+
+        a {
+            word-break: break-word;
+        }
+
+        blockquote {
+            border-left: 2px solid var(--accent-color);
+            background: var(--blockquote-background-color);
+            border-radius: 0 6px 6px 0;
+            font-style: normal;
+        }
+
+        /* Screenshots are evidence — frame them so they read as artefacts. */
+        img {
+            border-radius: 6px;
+            border: 1px solid var(--card-border-color);
+        }
+
+        table {
+            font-family: var(--base-font-family);
+            font-size: 1.45rem;
+        }
+
+        th {
+            font-family: var(--mono-font-family);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--card-text-color-tertiary);
+            background: var(--tr-even-background-color);
+        }
+
+        th,
+        td {
+            padding: 8px 12px;
+        }
+    }
+}
+
+/* ==========================================================================
+   7. Code blocks — terminal chrome
+   ========================================================================== */
+
+.article-page .main-article .article-content {
+    .highlight,
+    pre {
+        border-radius: 8px;
+        border: 1px solid var(--card-border-color);
+        font-size: 1.4rem;
+    }
+
+    .highlight {
+        padding: 0;
+        overflow: hidden;
+        background: var(--pre-background-color);
+
+        /* Title bar across the top of every highlighted block. */
+        &::before {
+            content: "";
+            display: block;
+            height: 32px;
+            background-color: var(--pre-chrome-background);
+            border-bottom: 1px solid var(--pre-chrome-border);
+            background-image: radial-gradient(circle 4px at 18px 16px, #ff5f57 100%, transparent 0),
+                radial-gradient(circle 4px at 36px 16px, #febc2e 100%, transparent 0),
+                radial-gradient(circle 4px at 54px 16px, #28c840 100%, transparent 0);
+            background-repeat: no-repeat;
+        }
+
+        /* Chroma nests .chroma > pre, or .chroma > table.lntable > td > pre
+           when line numbers are on. Strip both back to bare text, then put the
+           padding on the outermost box so the two columns stay in step. */
+        .chroma {
+            background: transparent;
+        }
+
+        pre {
+            border: 0;
+            border-radius: 0;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            overflow-x: auto;
+        }
+
+        /* Block without line numbers. */
+        > .chroma > pre,
+        > pre {
+            padding: 16px 24px;
+        }
+
+        /* Padding goes on the inner <pre>, not the cells: a table cell that is
+           also width-constrained collapses the scrollable <pre> inside it to
+           zero. Values are literal rather than `var(--card-padding)` because
+           Hugo's CSS minifier drops a shorthand when a var() is followed by
+           further values. */
+        .lntable {
+            border: 0;
+            margin: 0;
+            width: 100%;
+
+            td {
+                border: 0;
+                padding: 0;
+                vertical-align: top;
+            }
+
+            .lntd:first-child pre {
+                overflow: visible;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-left: 18px;
+            }
+
+            .lntd:last-child pre {
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-left: 14px;
+                padding-right: 24px;
+            }
+
+            tr:nth-child(even) {
+                background: transparent;
+            }
+        }
+
+        /* Chroma puts a trailing newline inside each .lnt, and the theme makes
+           them `display: block` — under `white-space: pre` that newline then
+           costs a second line, so the gutter drifts one row per line. Inline
+           spans let the newline itself do the wrapping, keeping the numbers
+           level with their code. */
+        .lnt,
+        .ln {
+            display: inline;
+            margin-right: 0;
+            padding: 0;
+            color: var(--pre-gutter-color);
+            user-select: none;
+        }
+    }
+
+    .copyCodeButton {
+        top: 6px;
+        right: 10px;
+        font-family: var(--mono-font-family);
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        background: transparent;
+        border: 1px solid var(--pre-button-border);
+        color: var(--pre-button-color);
+        box-shadow: none;
+
+        &:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+    }
+}
+
+/* ==========================================================================
+   8. Widgets
+   ========================================================================== */
+
+.widget {
+    .widget-icon {
+        color: var(--accent-color);
+    }
+
+    .widget-title {
+        font-family: var(--mono-font-family);
+        font-size: 1.3rem;
+        letter-spacing: 0.06em;
+    }
+}
+
+.widget--search input {
+    font-family: var(--mono-font-family);
+    font-size: 1.4rem;
+    border: 1px solid var(--card-border-color);
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+        border-color: var(--accent-color);
+    }
+}
+
+.widget--archive .widget-archive--list a {
+    font-family: var(--mono-font-family);
+    font-size: 1.4rem;
+    border-radius: 6px;
+
+    &:hover {
+        color: var(--accent-color);
+    }
+
+    .archives-year {
+        font-weight: 500;
+    }
+}
+
+.widget--toc #TableOfContents {
+    font-family: var(--mono-font-family);
+    font-size: 1.3rem;
+
+    a {
+        border-radius: 4px;
+        transition: color 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            color: var(--accent-color);
+            background: var(--card-background-selected);
+        }
+    }
+
+    ol li a:first-of-type::before {
+        color: var(--accent-color);
+        font-weight: 500;
+    }
+}
+
+/* Taxonomy landing pages */
+.section-card {
+    transition: border-color 0.25s ease;
+
+    &:hover {
+        border-color: var(--accent-color);
+    }
+
+    .section-term {
+        font-family: var(--mono-font-family);
+        letter-spacing: -0.01em;
+    }
+
+    .section-count {
+        font-family: var(--mono-font-family);
+        color: var(--card-text-color-tertiary);
+    }
+}
+
+/* ==========================================================================
+   9. Pagination and footer
+   ========================================================================== */
+
+.pagination {
+    border: 1px solid var(--card-border-color);
+    font-family: var(--mono-font-family);
+
+    .page-link {
+        font-size: 1.4rem;
+        transition: color 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            color: var(--accent-color);
+            background: var(--card-background-selected);
+        }
+
+        &.current {
+            background: var(--accent-color);
+            color: var(--accent-color-text);
+        }
+    }
+}
+
+.footer {
+    font-family: var(--mono-font-family);
+    font-size: 1.25rem;
+    color: var(--card-text-color-tertiary);
+    letter-spacing: 0.01em;
+
+    a {
+        color: var(--card-text-color-secondary);
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+}
+
+/* ==========================================================================
+   10. Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .article-list article:hover {
+        transform: none;
+    }
+}
+
+/* ==========================================================================
+   11. Landing hub (layouts/index.html)
+   ========================================================================== */
+
+.home-intro,
+.home-sections,
+.home-recent {
+    margin-bottom: var(--section-separation);
+}
+
+.home-intro {
+    background: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    color: var(--card-text-color-main);
+    font-size: 1.6rem;
+    line-height: 1.7;
+
+    p {
+        margin: 0 0 0.8em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    strong {
+        font-family: var(--mono-font-family);
+        font-weight: 600;
+    }
+}
+
+.section-title {
+    font-family: var(--mono-font-family);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--card-text-color-tertiary);
+    margin: 0 0 14px;
+
+    &::before {
+        content: "// ";
+        color: var(--accent-color);
+    }
+}
+
+.home-section-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+
+    @include respond(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.home-section-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    color: var(--card-text-color-main);
+    height: 100%;
+    align-items: flex-start;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+        color: var(--card-text-color-main);
+        border-color: var(--accent-color);
+        transform: translateY(-2px);
+    }
+}
+
+.home-section-icon {
+    display: flex;
+    flex-shrink: 0;
+    color: var(--accent-color);
+
+    svg {
+        width: 22px;
+        height: 22px;
+        stroke-width: 1.5;
+    }
+}
+
+.home-section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    flex-grow: 1;
+}
+
+.home-section-name {
+    font-family: var(--mono-font-family);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.home-section-desc {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: var(--card-text-color-tertiary);
+}
+
+/* Post count, or "soon" for a section with nothing published yet. */
+.home-section-count {
+    flex-shrink: 0;
+    align-self: flex-start;
+    font-family: var(--mono-font-family);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: var(--tag-border-radius);
+    background: var(--card-background-selected);
+    color: var(--accent-color);
+}
+
+/* An empty section still renders its page; say so rather than showing nothing. */
+.section-empty {
+    background: var(--card-background);
+    border: 1px dashed var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    color: var(--card-text-color-tertiary);
+    font-family: var(--mono-font-family);
+    font-size: 1.4rem;
+}

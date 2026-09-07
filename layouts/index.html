@@ -1,0 +1,71 @@
+{{/* Landing hub, replacing the theme's paginated feed of every post.
+
+     Top: whatever is written in content/_index.md.
+     Middle: one card per content section, with a live post count.
+     Bottom: the few most recent posts across all sections.
+
+     Sections come from Params.mainSections so adding a section to the config
+     is enough — this template does not need editing. */}}
+
+{{ define "main" }}
+    {{- $sections := slice -}}
+    {{- range .Site.Params.mainSections -}}
+        {{- with $.Site.GetPage (printf "/%s" .) -}}
+            {{- $sections = $sections | append . -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- with .Content }}
+        <section class="home-intro">
+            {{ . }}
+        </section>
+    {{- end }}
+
+    <section class="home-sections">
+        <h2 class="section-title">Sections</h2>
+        <div class="home-section-grid">
+            {{- range $sections -}}
+                {{- $count := len (where .RegularPagesRecursive "Params.hidden" "!=" true) -}}
+                <a class="home-section-card" href="{{ .RelPermalink }}">
+                    <span class="home-section-icon">
+                        {{- with .Params.menu.main.params.icon -}}
+                            {{ partial "helper/icon" . }}
+                        {{- end -}}
+                    </span>
+                    <span class="home-section-body">
+                        <span class="home-section-name">{{ .Title }}</span>
+                        {{- with .Params.description }}
+                            <span class="home-section-desc">{{ . }}</span>
+                        {{- end }}
+                    </span>
+                    <span class="home-section-count">
+                        {{- if eq $count 0 -}}
+                            soon
+                        {{- else -}}
+                            {{ $count }}
+                        {{- end -}}
+                    </span>
+                </a>
+            {{- end -}}
+        </div>
+    </section>
+
+    {{- $recent := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+    {{- $recent = where $recent "Params.hidden" "!=" true -}}
+    {{- with first 4 $recent }}
+        <section class="home-recent">
+            <h2 class="section-title">Latest</h2>
+            <div class="article-list--compact">
+                {{ range . }}
+                    {{ partial "article-list/compact" . }}
+                {{ end }}
+            </div>
+        </section>
+    {{- end }}
+
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

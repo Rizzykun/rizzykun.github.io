@@ -1,0 +1,48 @@
+{{/* Overrides the theme's image render hook.
+
+     The theme unconditionally builds 480w and 1024w variants, which *upscales*
+     any screenshot narrower than 1024px — more bytes for no extra detail. This
+     version only emits a candidate when it is genuinely smaller than the
+     source, and always includes the original as the widest candidate. */}}
+
+{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+{{- $permalink := .Destination | relURL | safeURL -}}
+{{- $alt := .PlainText | safeHTML -}}
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+{{- $srcset := slice -}}
+{{- $galleryImage := false -}}
+
+{{- if $image -}}
+	{{- $permalink = $image.RelPermalink -}}
+
+	{{- if ne (path.Ext .Destination) ".svg" -}}
+		{{- $width = $image.Width -}}
+		{{- $height = $image.Height -}}
+		{{- $galleryImage = true -}}
+
+		{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
+			{{- range (slice 480 1024) -}}
+				{{- if lt . $image.Width -}}
+					{{- $resized := $image.Resize (printf "%dx" .) -}}
+					{{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
+				{{- end -}}
+			{{- end -}}
+			{{- $srcset = $srcset | append (printf "%s %dw" $image.RelPermalink $image.Width) -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+
+<img src="{{ $permalink }}"
+	{{ with $width }}width="{{ . }}"{{ end }}
+	{{ with $height }}height="{{ . }}"{{ end }}
+	{{ with $srcset }}srcset="{{ delimit . ", " }}" sizes="(min-width: 1024px) 800px, 100vw"{{ end }}
+	loading="lazy"
+	decoding="async"
+	{{ with $alt }}alt="{{ . }}"{{ end }}
+	{{ if $galleryImage }}
+		class="gallery-image"
+		data-flex-grow="{{ div (mul $width 100) $height }}"
+		data-flex-basis="{{ div (mul $width 240) $height }}px"
+	{{ end }}
+>
