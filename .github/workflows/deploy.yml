@@ -42,7 +42,11 @@ jobs:
             - name: Build
               run: hugo --minify --gc
 
+            # Pull requests build only. Without this guard a PR would publish
+            # its own build to gh-pages, so the live site would change before
+            # anything was reviewed or merged.
             - name: Deploy 🚀
+              if: github.event_name == 'push' && github.ref == 'refs/heads/master'
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: gh-pages
