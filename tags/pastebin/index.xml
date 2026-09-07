@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pastebin on Rizzykun</title><link>https://rizzykun.github.io/tags/pastebin/</link><description>Recent content in Pastebin on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 25 Aug 2025 09:14:47 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/tags/pastebin/index.xml" rel="self" type="application/rss+xml"/><item><title>SUN CTF 2025: Who's Alpha</title><link>https://rizzykun.github.io/p/osint-whos-alpha/</link><pubDate>Mon, 25 Aug 2025 09:14:47 +0000</pubDate><guid>https://rizzykun.github.io/p/osint-whos-alpha/</guid><description>&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/1.jpg" alt="Featured image of post SUN CTF 2025: Who's Alpha" /&gt;&lt;p&gt;Chall details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Details&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Author&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;warlocksmurf &amp;amp; Sai&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Category&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;OSINT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Score&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;260&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;One of the largest financial institutions in Malaysia, &lt;strong&gt;MoneyPro Sdn Bhd&lt;/strong&gt;, has been breached by a notorious hacker group led by a mysterious figure known only as “Alpha.” As part of the &lt;strong&gt;Malaysia Cyber Defend Associate (MCDA)&lt;/strong&gt; team, your mission is to uncover Alpha’s true identity. Flag format: &lt;code&gt;sunctf25{Firstname_LastName}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;Interestingly this chall only had 4 out of 81 teams that were able to solve it in time.&lt;/p&gt;
+&lt;p&gt;The challenge shipped with an incident report on the MoneyPro breach: &lt;a class="link" href="investigation-report.pdf" &gt;Investigation Report (PDF)&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="-solution"&gt;&lt;a href="#-solution" class="header-anchor"&gt;&lt;/a&gt;🕵️‍♂️ Solution
+&lt;/h1&gt;&lt;p&gt;From the &lt;a class="link" href="https://github.com/Rizzykun/rizzykun.github.io/blob/master/content/post/2025/sunctf/osint/InvesigationReport.pdf" target="_blank" rel="noopener"
+&gt;Investigation Report&lt;/a&gt; given,
+The only lead we have is the social media account of a user named &lt;strong&gt;Bravo&lt;/strong&gt;. That’s where the OSINT trail begins..&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/1.jpg"
+width="794"
+height="717"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/1_hu_793e0eafeb50a87.jpg 480w, https://rizzykun.github.io/p/osint-whos-alpha/1.jpg 794w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image1"
+class="gallery-image"
+data-flex-grow="110"
+data-flex-basis="265px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="tracking-bravos-social-media"&gt;&lt;a href="#tracking-bravos-social-media" class="header-anchor"&gt;&lt;/a&gt;Tracking Bravo’s Social Media
+&lt;/h2&gt;&lt;p&gt;I searched through popular social platforms and eventually located Bravo’s &lt;strong&gt;X (Twitter)&lt;/strong&gt; account.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/2.png"
+width="1124"
+height="871"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/2_hu_d828abeb4ac7763d.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/2_hu_575f4692cd9f6f57.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/2.png 1124w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image2"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="309px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Scrolling through his timeline revealed an interesting clue—a suspicious &lt;strong&gt;Google Drive link&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/3.png"
+width="1220"
+height="686"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/3_hu_793fe5796d60939c.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/3_hu_7128ffa87ce47820.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/3.png 1220w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image3"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="exploring-the-google-drive"&gt;&lt;a href="#exploring-the-google-drive" class="header-anchor"&gt;&lt;/a&gt;Exploring the Google Drive
+&lt;/h2&gt;&lt;p&gt;The Drive contained:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A folder full of &lt;strong&gt;logos&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;A file named &lt;code&gt;Private.zip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;Note.txt&lt;/code&gt; file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/4.png"
+width="1172"
+height="163"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/4_hu_990b7297e73f63e4.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/4_hu_14bd774d7fd68f93.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/4.png 1172w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image4"
+class="gallery-image"
+data-flex-grow="719"
+data-flex-basis="1725px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Opening the note revealed a &lt;strong&gt;password hint&lt;/strong&gt;: it was a combination of Bravo’s mother’s name and an important day (the day he signed a &lt;strong&gt;RM10,000 contract&lt;/strong&gt;). Both details can be found in his X posts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unlocking-the-zip"&gt;&lt;a href="#unlocking-the-zip" class="header-anchor"&gt;&lt;/a&gt;Unlocking the Zip
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/5.png"
+width="661"
+height="188"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/5_hu_8717ffa220850320.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/5.png 661w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image5"
+class="gallery-image"
+data-flex-grow="351"
+data-flex-basis="843px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;With the password reconstructed, I unzipped &lt;code&gt;Private.zip&lt;/code&gt; to find intelligence on the &lt;strong&gt;TigerP4tch&lt;/strong&gt; group. Inside Bravo’s folder, I finally uncovered a partial name:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Lucas M.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The hunt for his last name was on.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="following-charlies-trail"&gt;&lt;a href="#following-charlies-trail" class="header-anchor"&gt;&lt;/a&gt;Following Charlie’s Trail
+&lt;/h2&gt;&lt;p&gt;Inside Charlie’s folder, a chat log between Bravo and Charlie revealed another breadcrumb. Bravo hinted that something important was stored on &lt;strong&gt;Pastebin&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/6.png"
+width="1440"
+height="3200"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/6_hu_ce2d0e70f0b8ecd9.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/6_hu_ff3512b16103b795.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/6.png 1440w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image6"
+class="gallery-image"
+data-flex-grow="45"
+data-flex-basis="108px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="pastebin-recon"&gt;&lt;a href="#pastebin-recon" class="header-anchor"&gt;&lt;/a&gt;Pastebin Recon
+&lt;/h2&gt;&lt;p&gt;After some digging, I located a Pastebin account under the username &lt;code&gt;Alice_R&lt;/code&gt;. However, the paste was &lt;strong&gt;password-protected&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/7.png"
+width="1264"
+height="388"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/7_hu_34b587cd566eca4d.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/7_hu_d76a10b0a684a24c.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/7.png 1264w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image7"
+class="gallery-image"
+data-flex-grow="325"
+data-flex-basis="781px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Back in the Google Drive folder full of logos, I noticed Alice’s shop logo featuring a &lt;strong&gt;rose&lt;/strong&gt;. The chat log mentioned the password is the flower on her shop logo. Trying &lt;strong&gt;rose&lt;/strong&gt; as the password worked, unlocking the paste.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/8.png"
+width="896"
+height="613"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/8_hu_fcf748404837f6dd.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/8.png 896w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image8"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="350px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="the-final-reveal"&gt;&lt;a href="#the-final-reveal" class="header-anchor"&gt;&lt;/a&gt;The Final Reveal
+&lt;/h2&gt;&lt;p&gt;The unlocked paste finally exposed Alpha’s full name:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Lucas Moore&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;With that, Alpha’s identity was confirmed.&lt;/p&gt;</description></item></channel></rss>

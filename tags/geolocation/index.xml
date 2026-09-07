@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Geolocation on Rizzykun</title><link>https://rizzykun.github.io/tags/geolocation/</link><description>Recent content in Geolocation on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 Oct 2025 09:14:47 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/tags/geolocation/index.xml" rel="self" type="application/rss+xml"/><item><title>Siber Siaga 2025: Finale</title><link>https://rizzykun.github.io/p/siber-siaga-2025-finale/</link><pubDate>Wed, 01 Oct 2025 09:14:47 +0000</pubDate><guid>https://rizzykun.github.io/p/siber-siaga-2025-finale/</guid><description>&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02.png" alt="Featured image of post Siber Siaga 2025: Finale" /&gt;&lt;h1 id="the-starting-point"&gt;&lt;a href="#the-starting-point" class="header-anchor"&gt;&lt;/a&gt;The Starting Point
+&lt;/h1&gt;&lt;p&gt;By Rizzykun&lt;/p&gt;
+&lt;p&gt;Category: OSINT&lt;/p&gt;
+&lt;p&gt;Description: &lt;/p&gt;
+&lt;p&gt;One of our agents managed to locate one of the suspects. We lost contact before he could tell us where he was. This snapshot was the only documentation he could send. Can you find where this place is?&lt;/p&gt;
+&lt;p&gt;Note: Use the google map name if you have found the location.&lt;/p&gt;
+&lt;p&gt;Flag format: SIBER25{main_street-town_name-state_name-country}&lt;/p&gt;
+&lt;p&gt;Answer:&lt;/p&gt;
+&lt;p&gt;Resource:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-01.png"
+width="683"
+height="822"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-01_hu_85038f21eb846ab8.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-01.png 683w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="83"
+data-flex-basis="199px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, this is the last place the suspect was seen, okay , Let’s lock in!!&lt;/p&gt;
+&lt;p&gt;First, we need to identify where is this place, maybe the shops could help?&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02.png"
+width="1252"
+height="872"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02_hu_d8e6e6002ac4b00b.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02_hu_c7dd29478ae97c99.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02.png 1252w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="143"
+data-flex-basis="344px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, he is near these shops. Let’s try locating every single store.&lt;/p&gt;
+&lt;p&gt;When googling each of the store names, almost every single one returns that it is a part of multiple branches of a store chain in Russia except for Клубника, салон фотопечати (Strawberry, Photo Printing Salon). This store is an independent and unique store, then, I find a city website named chaykovsky which holds info about the store.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03.png"
+width="1490"
+height="940"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03_hu_ec5eb2d16d5a6305.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03_hu_1e3743080527757a.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03.png 1490w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="158"
+data-flex-basis="380px"
+&gt;
+ &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04.png"
+width="1531"
+height="688"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04_hu_40c967c7ff792ae6.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04_hu_f254c2e24db648d8.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04.png 1531w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="534px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The website pinpoint the exact location of the store and give the address. Then, I enter the address in google Maps and it gave the result:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05.png"
+width="1452"
+height="854"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05_hu_487e07e45ccc4cf8.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05_hu_7dc7d17be356b5a3.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05.png 1452w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 5"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="408px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Then, we get the address , following the flag format we got : &lt;/p&gt;
+&lt;p&gt;SIBER25{ulitsa_sovetskaya-chaykovsky-perm_krai-russia}&lt;/p&gt;
+&lt;p&gt;The suspect was last seen located near mall named ТЦ (Мега).&lt;/p&gt;</description></item></channel></rss>

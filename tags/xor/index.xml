@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XOR on Rizzykun</title><link>https://rizzykun.github.io/tags/xor/</link><description>Recent content in XOR on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 07 Oct 2025 01:45:47 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/tags/xor/index.xml" rel="self" type="application/rss+xml"/><item><title>SUN CTF 2025: Get Clawed</title><link>https://rizzykun.github.io/p/get-clawed/</link><pubDate>Tue, 07 Oct 2025 01:45:47 +0000</pubDate><guid>https://rizzykun.github.io/p/get-clawed/</guid><description>&lt;img src="https://rizzykun.github.io/p/get-clawed/img-03.png" alt="Featured image of post SUN CTF 2025: Get Clawed" /&gt;&lt;h1 id="sun-ctf-2025-forensic"&gt;&lt;a href="#sun-ctf-2025-forensic" class="header-anchor"&gt;&lt;/a&gt;SUN CTF 2025 Forensic
+&lt;/h1&gt;&lt;p&gt;Challenge : Get Clawed&lt;/p&gt;
+&lt;p&gt;Analyze a disk image and network traffic capture to uncover hidden data.&lt;/p&gt;
+&lt;p&gt;Open .pcap file find : &lt;/p&gt;
+&lt;p&gt;Suspicious HTTP GET traffic containing ?guid= stood out — indicative of possible C2-style communication.&lt;/p&gt;
+&lt;p&gt;REFERENCE : &lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://qiaonpc.github.io/post/get-clawed/" target="_blank" rel="noopener"
+&gt;https://qiaonpc.github.io/post/get-clawed/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://warlocksmurf.github.io/posts/cyberspacectf2024/" target="_blank" rel="noopener"
+&gt;https://warlocksmurf.github.io/posts/cyberspacectf2024/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Open disk, find sus: &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-01.png"
+width="1127"
+height="491"
+srcset="https://rizzykun.github.io/p/get-clawed/img-01_hu_8ee32b5a1642d330.png 480w, https://rizzykun.github.io/p/get-clawed/img-01_hu_72606db62f56fc41.png 1024w, https://rizzykun.github.io/p/get-clawed/img-01.png 1127w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="229"
+data-flex-basis="550px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Use c2 script get link : &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-02.png"
+width="1040"
+height="777"
+srcset="https://rizzykun.github.io/p/get-clawed/img-02_hu_405d0d9df567d89d.png 480w, https://rizzykun.github.io/p/get-clawed/img-02_hu_28032dccab1677e3.png 1024w, https://rizzykun.github.io/p/get-clawed/img-02.png 1040w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="321px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://gist.githubusercontent.com/warlocksmurf/e19b5c0d8ab85e07573203ccaa6b39ef/raw/0b3ee0b5e7bc99bbbd4f618a6e025c6d4d6e3aee/sussy" target="_blank" rel="noopener"
+&gt;https://gist.githubusercontent.com/warlocksmurf/e19b5c0d8ab85e07573203ccaa6b39ef/raw/0b3ee0b5e7bc99bbbd4f618a6e025c6d4d6e3aee/sussy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Base64 it and get what to do with .clawed :&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-03.png"
+width="1533"
+height="858"
+srcset="https://rizzykun.github.io/p/get-clawed/img-03_hu_6cc5531c3c299475.png 480w, https://rizzykun.github.io/p/get-clawed/img-03_hu_3238e42a8ab87a43.png 1024w, https://rizzykun.github.io/p/get-clawed/img-03.png 1533w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="178"
+data-flex-basis="428px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;We get the key, decrypt XOR, me can export png now :&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-04.png"
+width="643"
+height="363"
+srcset="https://rizzykun.github.io/p/get-clawed/img-04_hu_32b1ca8ae158dacc.png 480w, https://rizzykun.github.io/p/get-clawed/img-04.png 643w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="425px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Man see flag, man happy&lt;/p&gt;</description></item></channel></rss>

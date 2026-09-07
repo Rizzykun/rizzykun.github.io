@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WHY CTF 2025 on Rizzykun</title><link>https://rizzykun.github.io/categories/why-ctf-2025/</link><description>Recent content in WHY CTF 2025 on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 25 Aug 2025 09:14:47 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/categories/why-ctf-2025/index.xml" rel="self" type="application/rss+xml"/><item><title>WHY CTF 2025: Shoe Shop</title><link>https://rizzykun.github.io/p/web-shoe-shop/</link><pubDate>Mon, 25 Aug 2025 09:14:47 +0000</pubDate><guid>https://rizzykun.github.io/p/web-shoe-shop/</guid><description>&lt;img src="https://rizzykun.github.io/p/web-shoe-shop/shoeshop.png" alt="Featured image of post WHY CTF 2025: Shoe Shop" /&gt;&lt;h2 id="-description"&gt;&lt;a href="#-description" class="header-anchor"&gt;&lt;/a&gt;📝 Description
+&lt;/h2&gt;&lt;p&gt;We just launched a brand-new &lt;a class="link" href="https://shoe-shop-1.ctf.zone/" target="_blank" rel="noopener"
+&gt;shoe store&lt;/a&gt; to sell some fancy kicks.
+Unfortunately, the admin beat us to it and already snagged the &lt;strong&gt;exclusive pair&lt;/strong&gt; in his cart. 👟✨
+But hey—feel free to explore the shop, try out the cart, and see what you can uncover.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-solution-walkthrough"&gt;&lt;a href="#-solution-walkthrough" class="header-anchor"&gt;&lt;/a&gt;💡 Solution Walkthrough
+&lt;/h2&gt;&lt;p&gt;We’re dealing with an online shoe store where you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sign up for an account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add items to your cart&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;View your cart contents&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pretty normal e-commerce flow, right? Or… is it? 👀&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/web-shoe-shop/shoeshop.png"
+width="1914"
+height="833"
+srcset="https://rizzykun.github.io/p/web-shoe-shop/shoeshop_hu_55998dba6b5a98a5.png 480w, https://rizzykun.github.io/p/web-shoe-shop/shoeshop_hu_5e5d7e6a3bfc6820.png 1024w, https://rizzykun.github.io/p/web-shoe-shop/shoeshop.png 1914w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image1"
+class="gallery-image"
+data-flex-grow="229"
+data-flex-basis="551px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-the-idor-moment"&gt;&lt;a href="#-the-idor-moment" class="header-anchor"&gt;&lt;/a&gt;🔓 The IDOR Moment
+&lt;/h3&gt;&lt;p&gt;While browsing the cart, something caught my eye…
+The URL looked like this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;page=cart&amp;amp;id=694&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;That &lt;code&gt;id&lt;/code&gt; parameter smells suspicious. What if we tweak it? 🤔&lt;/p&gt;
+&lt;p&gt;So let’s try checking &lt;strong&gt;id #1 cart&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://shoe-shop-1.ctf.zone/index.php?page=cart&amp;amp;id=1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Bingo! 🎯 We just accessed another user’s cart. And guess who that is? Yep—the admin.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/web-shoe-shop/shoeshop2.png"
+width="694"
+height="206"
+srcset="https://rizzykun.github.io/p/web-shoe-shop/shoeshop2_hu_d06fe4b611a99d65.png 480w, https://rizzykun.github.io/p/web-shoe-shop/shoeshop2.png 694w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+class="gallery-image"
+data-flex-grow="336"
+data-flex-basis="808px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-flag"&gt;&lt;a href="#-flag" class="header-anchor"&gt;&lt;/a&gt;🏁 Flag
+&lt;/h3&gt;&lt;p&gt;And there it is:
+&lt;code&gt;flag{00f34f9c417fcaa72b16f79d02d33099}&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;⚡Lesson learned: &lt;strong&gt;Always validate user access before showing sensitive data.&lt;/strong&gt;🚨&lt;/p&gt;</description></item></channel></rss>

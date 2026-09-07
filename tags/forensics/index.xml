@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Forensics on Rizzykun</title><link>https://rizzykun.github.io/tags/forensics/</link><description>Recent content in Forensics on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 07 Oct 2025 01:45:49 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/tags/forensics/index.xml" rel="self" type="application/rss+xml"/><item><title>SUN CTF 2025: SOC Shift</title><link>https://rizzykun.github.io/p/soc-shift/</link><pubDate>Tue, 07 Oct 2025 01:45:49 +0000</pubDate><guid>https://rizzykun.github.io/p/soc-shift/</guid><description>&lt;img src="https://rizzykun.github.io/p/soc-shift/img-01.png" alt="Featured image of post SUN CTF 2025: SOC Shift" /&gt;&lt;p&gt;Challenge : SOC Shift&lt;/p&gt;
+&lt;p&gt;Open excel file, have like 10,000 lines . Filter by country ISO code MY&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/soc-shift/img-01.png"
+width="1919"
+height="985"
+srcset="https://rizzykun.github.io/p/soc-shift/img-01_hu_db2b1c6683d08bfc.png 480w, https://rizzykun.github.io/p/soc-shift/img-01_hu_c3d30694d5822cd7.png 1024w, https://rizzykun.github.io/p/soc-shift/img-01.png 1919w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="194"
+data-flex-basis="467px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Find sus base64 , go cyberchef
+&lt;img src="https://rizzykun.github.io/p/soc-shift/img-02.png"
+width="1917"
+height="901"
+srcset="https://rizzykun.github.io/p/soc-shift/img-02_hu_2ce2418c77b63bd2.png 480w, https://rizzykun.github.io/p/soc-shift/img-02_hu_a2e88c9e3996707f.png 1024w, https://rizzykun.github.io/p/soc-shift/img-02.png 1917w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="212"
+data-flex-basis="510px"
+&gt;
+Me get flag, me happy ;D&lt;/p&gt;
+&lt;p&gt;sunctf25{S1EM_b4s1cs_f0r_l0g_4n4Lys1s!}&lt;/p&gt;</description></item><item><title>SUN CTF 2025: Get Clawed</title><link>https://rizzykun.github.io/p/get-clawed/</link><pubDate>Tue, 07 Oct 2025 01:45:47 +0000</pubDate><guid>https://rizzykun.github.io/p/get-clawed/</guid><description>&lt;img src="https://rizzykun.github.io/p/get-clawed/img-03.png" alt="Featured image of post SUN CTF 2025: Get Clawed" /&gt;&lt;h1 id="sun-ctf-2025-forensic"&gt;&lt;a href="#sun-ctf-2025-forensic" class="header-anchor"&gt;&lt;/a&gt;SUN CTF 2025 Forensic
+&lt;/h1&gt;&lt;p&gt;Challenge : Get Clawed&lt;/p&gt;
+&lt;p&gt;Analyze a disk image and network traffic capture to uncover hidden data.&lt;/p&gt;
+&lt;p&gt;Open .pcap file find : &lt;/p&gt;
+&lt;p&gt;Suspicious HTTP GET traffic containing ?guid= stood out — indicative of possible C2-style communication.&lt;/p&gt;
+&lt;p&gt;REFERENCE : &lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://qiaonpc.github.io/post/get-clawed/" target="_blank" rel="noopener"
+&gt;https://qiaonpc.github.io/post/get-clawed/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://warlocksmurf.github.io/posts/cyberspacectf2024/" target="_blank" rel="noopener"
+&gt;https://warlocksmurf.github.io/posts/cyberspacectf2024/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Open disk, find sus: &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-01.png"
+width="1127"
+height="491"
+srcset="https://rizzykun.github.io/p/get-clawed/img-01_hu_8ee32b5a1642d330.png 480w, https://rizzykun.github.io/p/get-clawed/img-01_hu_72606db62f56fc41.png 1024w, https://rizzykun.github.io/p/get-clawed/img-01.png 1127w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="229"
+data-flex-basis="550px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Use c2 script get link : &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-02.png"
+width="1040"
+height="777"
+srcset="https://rizzykun.github.io/p/get-clawed/img-02_hu_405d0d9df567d89d.png 480w, https://rizzykun.github.io/p/get-clawed/img-02_hu_28032dccab1677e3.png 1024w, https://rizzykun.github.io/p/get-clawed/img-02.png 1040w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="321px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://gist.githubusercontent.com/warlocksmurf/e19b5c0d8ab85e07573203ccaa6b39ef/raw/0b3ee0b5e7bc99bbbd4f618a6e025c6d4d6e3aee/sussy" target="_blank" rel="noopener"
+&gt;https://gist.githubusercontent.com/warlocksmurf/e19b5c0d8ab85e07573203ccaa6b39ef/raw/0b3ee0b5e7bc99bbbd4f618a6e025c6d4d6e3aee/sussy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Base64 it and get what to do with .clawed :&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-03.png"
+width="1533"
+height="858"
+srcset="https://rizzykun.github.io/p/get-clawed/img-03_hu_6cc5531c3c299475.png 480w, https://rizzykun.github.io/p/get-clawed/img-03_hu_3238e42a8ab87a43.png 1024w, https://rizzykun.github.io/p/get-clawed/img-03.png 1533w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="178"
+data-flex-basis="428px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;We get the key, decrypt XOR, me can export png now :&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-04.png"
+width="643"
+height="363"
+srcset="https://rizzykun.github.io/p/get-clawed/img-04_hu_32b1ca8ae158dacc.png 480w, https://rizzykun.github.io/p/get-clawed/img-04.png 643w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="425px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Man see flag, man happy&lt;/p&gt;</description></item><item><title>Siber Siaga 2025: Preliminary</title><link>https://rizzykun.github.io/p/siber-siaga-2025-preliminary/</link><pubDate>Mon, 22 Sep 2025 11:45:47 +0000</pubDate><guid>https://rizzykun.github.io/p/siber-siaga-2025-preliminary/</guid><description>&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01.png" alt="Featured image of post Siber Siaga 2025: Preliminary" /&gt;&lt;h1 id="challenge-5--dumpster-diving"&gt;&lt;a href="#challenge-5--dumpster-diving" class="header-anchor"&gt;&lt;/a&gt;Challenge 5 : Dumpster Diving
+&lt;/h1&gt;&lt;p&gt;Solved by: Rizzykun&lt;/p&gt;
+&lt;p&gt;Description:&lt;/p&gt;
+&lt;p&gt;Aiya. I accidentally deleted the flag when cleaning up my Desktop.&lt;/p&gt;
+&lt;p&gt;Flag Format: SIBER25{flag} Zip Password: 0b20ca0c4860364140f51583e32bb28cdeecf13ebad62fd66b4f9786bf2c700d Challenge Creator: @identities&lt;/p&gt;
+&lt;p&gt;Answer : &lt;/p&gt;
+&lt;p&gt;Given an image file and .txt file. I immediately opened the image file using Exterro FTK Imager.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01.png"
+width="1600"
+height="900"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01_hu_947b19660d4cc438.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01_hu_452933cd8cd9b8ad.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;As I was traversing through the image file, I found multiple image files in the recycle bin. When I click it to read as ASCII, I get the flag : &lt;/p&gt;
+&lt;p&gt;Flag = SIBER25{1OokiN6_foR_7R4ShED_1T3ms}&lt;/p&gt;
+&lt;h1 id="challenge-6--viewport"&gt;&lt;a href="#challenge-6--viewport" class="header-anchor"&gt;&lt;/a&gt;Challenge 6 : Viewport
+&lt;/h1&gt;&lt;p&gt;Solved by: Rizzykun&lt;/p&gt;
+&lt;p&gt;Description:&lt;/p&gt;
+&lt;p&gt;Oops. I accidentally deleted the flag when cleaning up my Desktop.&lt;/p&gt;
+&lt;p&gt;Flag Format: SIBER25{flag} Zip Password: e0ff450ab4c79a7810ad46b45f4b8f10678a63df866757566d17b8b998be4161 Challenge Creator: @identities&lt;/p&gt;
+&lt;p&gt;Answer : &lt;/p&gt;
+&lt;p&gt;Just like the Dumpster challenge, I quickly open the image file given using  Exterro FTK Imager. &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-02.png"
+width="401"
+height="397"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-02.png 401w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="101"
+data-flex-basis="242px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I found out there were multiple interesting file directories, and when for looking.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-03.png"
+width="593"
+height="255"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-03_hu_b115c1e8898552e6.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-03.png 593w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="232"
+data-flex-basis="558px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;In the explorer folder, I noticed there are multiple deleted files. So I try to export them to my laptop and try to see it using tools named Thumb cache viewer.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04.png"
+width="1600"
+height="904"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04_hu_bf46b60d7df28302.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04_hu_16030c4d15ce6d52.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="176"
+data-flex-basis="424px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I check every single file and I see the flag in an image. Then I merged all the info from all the images and got the flag.&lt;/p&gt;
+&lt;p&gt;Flag = SIBER25{V3RY_sMA1L_thUm8n411S}&lt;/p&gt;</description></item></channel></rss>

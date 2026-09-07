@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CyberChef on Rizzykun</title><link>https://rizzykun.github.io/tags/cyberchef/</link><description>Recent content in CyberChef on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 07 Oct 2025 01:45:49 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/tags/cyberchef/index.xml" rel="self" type="application/rss+xml"/><item><title>SUN CTF 2025: SOC Shift</title><link>https://rizzykun.github.io/p/soc-shift/</link><pubDate>Tue, 07 Oct 2025 01:45:49 +0000</pubDate><guid>https://rizzykun.github.io/p/soc-shift/</guid><description>&lt;img src="https://rizzykun.github.io/p/soc-shift/img-01.png" alt="Featured image of post SUN CTF 2025: SOC Shift" /&gt;&lt;p&gt;Challenge : SOC Shift&lt;/p&gt;
+&lt;p&gt;Open excel file, have like 10,000 lines . Filter by country ISO code MY&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/soc-shift/img-01.png"
+width="1919"
+height="985"
+srcset="https://rizzykun.github.io/p/soc-shift/img-01_hu_db2b1c6683d08bfc.png 480w, https://rizzykun.github.io/p/soc-shift/img-01_hu_c3d30694d5822cd7.png 1024w, https://rizzykun.github.io/p/soc-shift/img-01.png 1919w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="194"
+data-flex-basis="467px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Find sus base64 , go cyberchef
+&lt;img src="https://rizzykun.github.io/p/soc-shift/img-02.png"
+width="1917"
+height="901"
+srcset="https://rizzykun.github.io/p/soc-shift/img-02_hu_2ce2418c77b63bd2.png 480w, https://rizzykun.github.io/p/soc-shift/img-02_hu_a2e88c9e3996707f.png 1024w, https://rizzykun.github.io/p/soc-shift/img-02.png 1917w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="212"
+data-flex-basis="510px"
+&gt;
+Me get flag, me happy ;D&lt;/p&gt;
+&lt;p&gt;sunctf25{S1EM_b4s1cs_f0r_l0g_4n4Lys1s!}&lt;/p&gt;</description></item></channel></rss>
