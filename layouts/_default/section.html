@@ -1,0 +1,50 @@
+{{/* Section listing.
+
+     Same shape as the theme's _default/list.html, with two changes:
+       - a section with nothing published says so, instead of rendering an
+         empty list under a "0 pages" header (Homelab and Projects, for now);
+       - pages nested in subfolders that are not themselves sections still
+         count, so content/writeups/2025/<event>/<post>/ is listed.
+
+     Taxonomy pages are untouched — they still use the theme's list.html. */}}
+
+{{ define "main" }}
+    {{- $pages := where .RegularPagesRecursive "Params.hidden" "!=" true -}}
+
+    <header>
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count">{{ T "list.page" (len $pages) }}</h3>
+                <h1 class="section-term">{{ .Title }}</h1>
+                {{ with .Params.description }}
+                    <h2 class="section-description">{{ . }}</h2>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+
+    {{ with .Content }}
+        <section class="home-intro">{{ . }}</section>
+    {{ end }}
+
+    {{- if eq (len $pages) 0 -}}
+        <p class="section-empty">
+            Nothing published here yet — first post coming soon.
+        </p>
+    {{- else -}}
+        {{ $paginator := .Paginate $pages }}
+        <section class="article-list--compact">
+            {{ range $paginator.Pages }}
+                {{ partial "article-list/compact" . }}
+            {{ end }}
+        </section>
+
+        {{- partial "pagination.html" . -}}
+    {{- end -}}
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

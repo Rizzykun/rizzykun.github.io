@@ -1,5 +1,6 @@
-# Pages placed under these sections will be shown on homepage and archive page.
-mainSections = ["post"]
+# Sections that count as posts. The homepage is a landing hub (see
+# layouts/index.html) rather than a feed, but search and the widgets use this.
+mainSections = ["writeups", "homelab", "projects"]
 # Output page's full content in RSS.
 rssFullContent = true
 favicon = "/favicon.jpg"
@@ -46,12 +47,6 @@ type = "tag-cloud"
 
 [widgets.homepage.params]
 limit = 12
-
-[[widgets.homepage]]
-type = "archives"
-
-[widgets.homepage.params]
-limit = 5
 
 [[widgets.page]]
 type = "toc"

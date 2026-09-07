@@ -1,3 +1,9 @@
-# Permalinks format of each content section
-post = "/p/:slug/"
+# Permalinks format of each content section.
+#
+# `writeups` keeps the old /p/:slug/ shape on purpose: those URLs are already
+# published and shared, and the section rename from `post` to `writeups` must
+# not break them.
+writeups = "/p/:slug/"
+homelab = "/homelab/:slug/"
+projects = "/projects/:slug/"
 page = "/:slug/"

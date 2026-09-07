@@ -708,3 +708,141 @@ body {
         transform: none;
     }
 }
+
+/* ==========================================================================
+   11. Landing hub (layouts/index.html)
+   ========================================================================== */
+
+.home-intro,
+.home-sections,
+.home-recent {
+    margin-bottom: var(--section-separation);
+}
+
+.home-intro {
+    background: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    color: var(--card-text-color-main);
+    font-size: 1.6rem;
+    line-height: 1.7;
+
+    p {
+        margin: 0 0 0.8em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    strong {
+        font-family: var(--mono-font-family);
+        font-weight: 600;
+    }
+}
+
+.section-title {
+    font-family: var(--mono-font-family);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--card-text-color-tertiary);
+    margin: 0 0 14px;
+
+    &::before {
+        content: "// ";
+        color: var(--accent-color);
+    }
+}
+
+.home-section-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+
+    @include respond(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.home-section-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    color: var(--card-text-color-main);
+    height: 100%;
+    align-items: flex-start;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+        color: var(--card-text-color-main);
+        border-color: var(--accent-color);
+        transform: translateY(-2px);
+    }
+}
+
+.home-section-icon {
+    display: flex;
+    flex-shrink: 0;
+    color: var(--accent-color);
+
+    svg {
+        width: 22px;
+        height: 22px;
+        stroke-width: 1.5;
+    }
+}
+
+.home-section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    flex-grow: 1;
+}
+
+.home-section-name {
+    font-family: var(--mono-font-family);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.home-section-desc {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: var(--card-text-color-tertiary);
+}
+
+/* Post count, or "soon" for a section with nothing published yet. */
+.home-section-count {
+    flex-shrink: 0;
+    align-self: flex-start;
+    font-family: var(--mono-font-family);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: var(--tag-border-radius);
+    background: var(--card-background-selected);
+    color: var(--accent-color);
+}
+
+/* An empty section still renders its page; say so rather than showing nothing. */
+.section-empty {
+    background: var(--card-background);
+    border: 1px dashed var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    color: var(--card-text-color-tertiary);
+    font-family: var(--mono-font-family);
+    font-size: 1.4rem;
+}

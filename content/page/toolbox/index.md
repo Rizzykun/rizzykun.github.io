@@ -29,7 +29,7 @@ links:
     website: https://ctftime.org/
 menu:
     main:
-        weight: 4
+        weight: 40
         params:
             icon: link
 
