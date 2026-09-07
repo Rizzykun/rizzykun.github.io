@@ -1,10 +1,14 @@
 ---
-title: Introduction
-description: 
+title: "Start Here"
+description: "Why this site exists, what you'll find in it, and how the writeups are organised."
 slug: hello-world
 date: 2025-01-01 00:00:00+0000
-image: pokemon-pikachu.gif
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+image: cover.png
+categories:
+  - Meta
+tags:
+  - Introduction
+weight: 1   # pins this post to the top of the list
 ---
 
 # 🎉 Welcome to My CTF Writeups!
@@ -38,3 +42,6 @@ So grab some popcorn 🍿, join me in the rabbit hole 🐇, and let’s see how 
 **Every flag is a small victory!** 🏁  
 
 ---
+
+![Pikachu, hacking](pokemon-pikachu.gif)
+

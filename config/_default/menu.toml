@@ -1,24 +1,21 @@
-# Configure main menu and social menu
-#[[main]]
-#identifier = "home"
-#name = "Home"
-#url = "/"
-#[main.params]
-#icon = "home"
-#newtab = true
+# Main navigation lives in each page's own front matter (see content/_index.md,
+# content/page/*/index.md). Only the social row is configured here.
 
-#[[social]]
-#identifier = "github"
-#name = "GitHub"
-#url = "rizzykun.github.io"
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/Rizzykun"
+
+[social.params]
+icon = "brand-github"
+
+# Add more as you go — the theme ships Tabler icons, e.g.
+# brand-x, brand-linkedin, brand-discord, mail, brand-tryhackme.
 #
-#[social.params]
-#icon = "brand-github"
+# [[social]]
+# identifier = "linkedin"
+# name = "LinkedIn"
+# url = "https://www.linkedin.com/in/your-handle"
 #
-#[[social]]
-#identifier = "twitter"
-#name = "Twitter"
-#url = "https://twitter.com"
-#
-#[social.params]
-#icon = "brand-twitter"
+# [social.params]
+# icon = "brand-linkedin"
