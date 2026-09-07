@@ -18,6 +18,9 @@ comments: false
 
 Hey there, Thanks for visiting my website 👋
 
+I'm **Afiq** — Muhammad Afiq Danial bin Mohd Bacho, online as **Rizzykun**.
+Computer Science at IIUM, CTF challenge creator, based in Greater Kuala Lumpur.
+
 I've finally decided to start documenting my **CTF (Capture The Flag)** journey! 🚩
 I'm still a beginner (yes, expect some failure moments 🤦), but that's exactly why this page exists — to **learn, share and laugh** along the way.
 
@@ -40,10 +43,11 @@ By writing everything down, I can track my progress and maybe even help another 
 
 ## 🏁 Competitions so far
 
-- **SUN CTF 2025** — forensics and OSINT
-- **Siber Siaga 2025** — preliminary and finale
-- **Securinets CTF 2025** — preliminary
-- **WHY CTF 2025** — web
+Thirteen and counting, from ICECTF in April 2025 to Sunway CTF in September
+2026 — including finals at NEXSEC, iGOH, IBOH and Siber Siaga. The full record,
+with results, certifications and talks, is on the
+[Track Record](/timeline/) page.
+
 
 ---
 
@@ -54,10 +58,7 @@ So grab some popcorn 🍿, join me in the rabbit hole 🐇, and let's see how de
 👉 Stay tuned for the next writeup — and remember:
 **Every flag is a small victory!** 🏁
 
-Find me on [GitHub](https://github.com/Rizzykun).
+Find me on [GitHub](https://github.com/Rizzykun) and [LinkedIn](https://www.linkedin.com/in/muhammad-afiq-danial-bin-mohd-bacho-01b177271/).
 
 ![Pikachu, hacking](pokemon-pikachu.gif)
 
-<!-- TODO(Rizzykun): add your team, what you're studying or working on, and any
-     other contact links (Discord, LinkedIn, X). Add socials to
-     config/_default/menu.toml too so they show in the sidebar. -->

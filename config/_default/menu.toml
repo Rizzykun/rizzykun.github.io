@@ -9,6 +9,14 @@ url = "https://github.com/Rizzykun"
 [social.params]
 icon = "brand-github"
 
+[[social]]
+identifier = "linkedin"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/muhammad-afiq-danial-bin-mohd-bacho-01b177271/"
+
+[social.params]
+icon = "brand-linkedin"
+
 # Add more as you go — the theme ships Tabler icons, e.g.
 # brand-x, brand-linkedin, brand-discord, mail, brand-tryhackme.
 #
