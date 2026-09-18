@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Final Year Project on Rizzykun</title><link>https://rizzykun.github.io/categories/final-year-project/</link><description>Recent content in Final Year Project on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/categories/final-year-project/index.xml" rel="self" type="application/rss+xml"/><item><title>Context-Aware IDPS for Web Servers</title><link>https://rizzykun.github.io/projects/idps-web-servers/</link><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><guid>https://rizzykun.github.io/projects/idps-web-servers/</guid><description>&lt;img src="https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__02.jpg" alt="Featured image of post Context-Aware IDPS for Web Servers" /&gt;&lt;p&gt;&lt;strong&gt;Automated Context-Aware Intrusion Detection and Prevention System (IDPS) for
+Web Servers&lt;/strong&gt; — my Final Year Project, built with Mohammad Danish Hakim bin
+Mohd Nasir.&lt;/p&gt;
+&lt;h2 id="the-idea"&gt;&lt;a href="#the-idea" class="header-anchor"&gt;&lt;/a&gt;The idea
+&lt;/h2&gt;&lt;p&gt;Most detection systems decide whether a request is malicious by looking at the
+request. This project adds &lt;strong&gt;context&lt;/strong&gt; — what else is happening around that
+request — so prevention decisions are based on more than a signature match in
+isolation.&lt;/p&gt;
+&lt;h2 id="what-fyp-1-covered"&gt;&lt;a href="#what-fyp-1-covered" class="header-anchor"&gt;&lt;/a&gt;What FYP 1 covered
+&lt;/h2&gt;&lt;p&gt;The first phase was mostly research: a literature review of how current
+industry detection and prevention systems actually work, and a study of
+real-world attack patterns against web servers.&lt;/p&gt;
+&lt;p&gt;Danish and I picked this deliberately to stretch ourselves. We had both done
+CTFs and built things before, but reading how production IDS/IPS deployments
+handle detection, tuning and false positives made it clear how much of this
+field we had only seen from the attacker&amp;rsquo;s side.&lt;/p&gt;
+&lt;h2 id="outcome"&gt;&lt;a href="#outcome" class="header-anchor"&gt;&lt;/a&gt;Outcome
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Silver Award&lt;/strong&gt; at the FYP 1 project evaluation, 3–4 June 2026.&lt;/p&gt;
+&lt;p&gt;FYP 2 continues the build.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__02.jpg"
+width="960"
+height="1280"
+srcset="https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__02_hu_a91c99c7ba595a54.jpg 480w, https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__02.jpg 960w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Poster board with the live monitors"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+&gt;
+&lt;img src="https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__01.jpg"
+width="960"
+height="1280"
+srcset="https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__01_hu_aad7989d459809fe.jpg 480w, https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__01.jpg 960w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="At the FYP poster and demo setup"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+&gt;
+&lt;img src="https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__03.jpg"
+width="960"
+height="1280"
+srcset="https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__03_hu_313893d46a1e2270.jpg 480w, https://rizzykun.github.io/projects/idps-web-servers/project__fyp1-idps__03.jpg 960w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="With our supervisor and teammates"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+&gt;
+&lt;/p&gt;</description></item></channel></rss>

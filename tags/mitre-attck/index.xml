@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MITRE ATT&amp;CK on Rizzykun</title><link>https://rizzykun.github.io/tags/mitre-attck/</link><description>Recent content in MITRE ATT&amp;CK on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/tags/mitre-attck/index.xml" rel="self" type="application/rss+xml"/><item><title>LogHunt — Security Log Investigation Toolkit</title><link>https://rizzykun.github.io/projects/loghunt/</link><pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate><guid>https://rizzykun.github.io/projects/loghunt/</guid><description>&lt;img src="https://rizzykun.github.io/projects/loghunt/project__loghunt__01.png" alt="Featured image of post LogHunt — Security Log Investigation Toolkit" /&gt;&lt;p&gt;&lt;strong&gt;LogHunt&lt;/strong&gt; takes a pile of log files and answers the question an analyst
+actually has: &lt;em&gt;what happened, to whom, and what do I check next?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It is not a SIEM, and I deliberately kept it from becoming one. It is the part
+of the workflow between &amp;ldquo;here are 9,000 log lines&amp;rdquo; and &amp;ldquo;here is the incident
+report&amp;rdquo;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;auth.log · security.log · access.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Log parsers format vote
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Normalization one schema
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Detection engine 11 rules
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Event correlation → incidents
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Risk scoring 0–100
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Investigation report
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="the-problem-i-was-actually-solving"&gt;&lt;a href="#the-problem-i-was-actually-solving" class="header-anchor"&gt;&lt;/a&gt;The problem I was actually solving
+&lt;/h2&gt;&lt;p&gt;Three things make log investigation painful, and none of them are fixed by
+writing a parser:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;An alert with no context is unactionable.&lt;/strong&gt; &amp;ldquo;Brute force from
+203.0.113.77&amp;rdquo; is background radiation on anything facing the internet.
+&amp;ldquo;Brute force, then a &lt;em&gt;successful&lt;/em&gt; login, then a privileged command, then an
+encoded PowerShell payload — same address, twenty minutes&amp;rdquo; is an incident.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A severity label cannot rank a queue.&lt;/strong&gt; Twenty &lt;code&gt;HIGH&lt;/code&gt; alerts still leave
+you picking one at random.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The evidence is split across files that look nothing alike.&lt;/strong&gt; The attack
+crosses the web log, the auth log and the Windows event log. Joining them
+is manual work.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="how-it-works"&gt;&lt;a href="#how-it-works" class="header-anchor"&gt;&lt;/a&gt;How it works
+&lt;/h2&gt;&lt;p&gt;Everything hangs off one decision: &lt;strong&gt;normalize first&lt;/strong&gt;. Every parser — Linux
+&lt;code&gt;auth.log&lt;/code&gt; (syslog and RFC3339), Windows Security (Event Viewer text, CSV or
+JSON) and Apache/Nginx access logs — emits the same 20-field event. After that,
+one detection rule covers SSH and Windows event 4625 at the same time, without
+knowing either format exists.&lt;/p&gt;
+&lt;p&gt;Format detection works by &lt;strong&gt;parser vote&lt;/strong&gt;: every parser gets a sample of the
+file and whichever recognises the most lines wins. Filenames lie; content
+doesn&amp;rsquo;t.&lt;/p&gt;
+&lt;p&gt;Eleven rules across six families: brute force, login-after-brute-force,
+anomalous login source, privilege escalation, web attack, and suspicious
+process execution. Three judgement calls did more for the output quality than
+any extra rule:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The binary isn&amp;rsquo;t the alert, the command line is.&lt;/strong&gt; &lt;code&gt;cmd.exe /c dir&lt;/code&gt; is
+&lt;code&gt;low&lt;/code&gt;. &lt;code&gt;powershell.exe -nop -w hidden -enc &amp;lt;base64&amp;gt;&lt;/code&gt; is &lt;code&gt;critical&lt;/code&gt;. A flat
+&amp;ldquo;these binaries are suspicious&amp;rdquo; list produces a queue nobody reads.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web findings say &lt;em&gt;suspected&lt;/em&gt;.&lt;/strong&gt; A signature match proves a payload was
+&lt;em&gt;sent&lt;/em&gt;, never that it worked — so the HTTP status sits next to every
+finding. A 200 on an injection attempt is the thing that changes your day.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Routine &lt;code&gt;sudo&lt;/code&gt; is &lt;code&gt;low&lt;/code&gt; by default.&lt;/strong&gt; An admin using sudo is the most
+common line in an auth log. That rule exists to feed a chain, not to page
+anyone at 3am.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/projects/loghunt/project__loghunt__01.png"
+width="1584"
+height="949"
+srcset="https://rizzykun.github.io/projects/loghunt/project__loghunt__01_hu_899302eac860cb8c.png 480w, https://rizzykun.github.io/projects/loghunt/project__loghunt__01_hu_d41dd24863844496.png 1024w, https://rizzykun.github.io/projects/loghunt/project__loghunt__01.png 1584w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="The dashboard overview, with the highest-risk incident up front"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+&gt;
+&lt;/p&gt;
+&lt;h2 id="the-part-i-got-wrong-first"&gt;&lt;a href="#the-part-i-got-wrong-first" class="header-anchor"&gt;&lt;/a&gt;The part I got wrong first
+&lt;/h2&gt;&lt;p&gt;Correlation is the feature the whole project rests on, and my first version of
+it was quietly broken.&lt;/p&gt;
+&lt;p&gt;I grouped alerts by any shared entity — source IP, account, &lt;strong&gt;or host&lt;/strong&gt; —
+within a time window. Host seemed obviously useful: a Windows process event
+carries no client IP, so how else do you tie it back to the logon that spawned
+it?&lt;/p&gt;
+&lt;p&gt;The result was one &amp;ldquo;incident&amp;rdquo; spanning &lt;strong&gt;594 minutes and 33 alerts&lt;/strong&gt;, which had
+swept up an admin&amp;rsquo;s ordinary afternoon of &lt;code&gt;sudo&lt;/code&gt; commands along with the actual
+intrusion, because everything happened on the same two servers. Technically
+correct grouping. Completely useless as an investigation.&lt;/p&gt;
+&lt;p&gt;Dropping host as a linking key gave me a clean &lt;strong&gt;20-minute, 24-alert chain&lt;/strong&gt;
+with the unrelated password-spray sitting in its own separate incident — and
+the cross-log-source links still held, because the attacker&amp;rsquo;s IP ties the web
+exploitation to the SSH brute force, and the &lt;em&gt;account&lt;/em&gt; ties the Windows process
+events back to their logon.&lt;/p&gt;
+&lt;p&gt;The lesson I&amp;rsquo;ll keep: a correlation rule that groups more is not a correlation
+rule that works better.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/projects/loghunt/project__loghunt__02.png"
+width="1584"
+height="949"
+srcset="https://rizzykun.github.io/projects/loghunt/project__loghunt__02_hu_cdf5644c25fce223.png 480w, https://rizzykun.github.io/projects/loghunt/project__loghunt__02_hu_69dc6ec16e04af37.png 1024w, https://rizzykun.github.io/projects/loghunt/project__loghunt__02.png 1584w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="An incident, with its stages in the order they were observed"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+&gt;
+&lt;/p&gt;
+&lt;h2 id="risk-scoring-you-can-argue-with"&gt;&lt;a href="#risk-scoring-you-can-argue-with" class="header-anchor"&gt;&lt;/a&gt;Risk scoring you can argue with
+&lt;/h2&gt;&lt;p&gt;Every score is &lt;code&gt;base severity + frequency + context + correlation&lt;/code&gt;, capped at
+100 — and the breakdown is shown wherever the number is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 70 base severity (critical)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 8 event frequency (30 events)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 4 privileged account
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 4 business-critical asset
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 3 external source address
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 10 part of a 7-stage attack chain
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 4 chain spans multiple log sources
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -3 capped at the 100-point ceiling
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;100/100 CRITICAL
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I found a genuine bug here by clicking through my own UI: the factors summed
+higher than the capped total, so the &amp;ldquo;why this score&amp;rdquo; table silently disagreed
+with the score above it. If you&amp;rsquo;re going to show your working, the working has
+to add up.&lt;/p&gt;
+&lt;p&gt;Correlation is a real feedback loop rather than decoration — alerts get scored,
+grouped into incidents, then &lt;strong&gt;re-scored&lt;/strong&gt; now that the chain is known. The same
+17-failure brute force scores lower on its own than it does when followed by a
+login and a privileged command. There&amp;rsquo;s a test that asserts exactly that.&lt;/p&gt;
+&lt;h2 id="proving-it-works"&gt;&lt;a href="#proving-it-works" class="header-anchor"&gt;&lt;/a&gt;Proving it works
+&lt;/h2&gt;&lt;p&gt;This is the part I care about most. A detection tool that only ever runs on
+data containing attacks is a tool nobody has measured.&lt;/p&gt;
+&lt;p&gt;So the generator writes &lt;strong&gt;two&lt;/strong&gt; datasets from one seed: an intrusion woven
+through a day of ordinary activity, and the &lt;em&gt;same&lt;/em&gt; background activity with no
+attack in it. Ground truth is written out beside the logs, so every alert can
+be checked instead of admired.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;attack dataset&lt;/th&gt;
+&lt;th&gt;clean baseline&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Events&lt;/td&gt;
+&lt;td&gt;9,779&lt;/td&gt;
+&lt;td&gt;9,669&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alerts&lt;/td&gt;
+&lt;td&gt;43 (16 critical, 5 high)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;18 — all low/info, zero medium+&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Attack-only rules that fired&lt;/td&gt;
+&lt;td&gt;10 of 11&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0 of 6&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Top incident&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;100/100 CRITICAL&lt;/strong&gt; — 24 alerts, 7 stages, 20 min, all 3 log sources&lt;/td&gt;
+&lt;td&gt;47/100 MEDIUM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The second column is the one that matters. Detecting the attack is easy if you
+don&amp;rsquo;t care how much you shout on a quiet day, and the tests assert &lt;strong&gt;both&lt;/strong&gt; —
+detection on one dataset and silence on the other. Loosen a threshold and the
+suite fails.&lt;/p&gt;
+&lt;p&gt;The scripted intrusion runs from reconnaissance through to cleanup: 41 path
+probes, SQL injection and traversal attempts, 17 failed SSH passwords for
+&lt;code&gt;admin&lt;/code&gt;, the password landing one second after the last failure, &lt;code&gt;/etc/shadow&lt;/code&gt;
+read via sudo, a UID 0 account created, then a jump to the domain controller —
+RDP logon, encoded PowerShell download cradle, &lt;code&gt;certutil&lt;/code&gt; transfer, SAM hive
+export — and finally a new account added to Administrators and the security
+audit log cleared.&lt;/p&gt;
+&lt;p&gt;LogHunt reconstructs all eight stages as a single incident.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/projects/loghunt/project__loghunt__03.png"
+width="1584"
+height="949"
+srcset="https://rizzykun.github.io/projects/loghunt/project__loghunt__03_hu_399b4b379d8a8979.png 480w, https://rizzykun.github.io/projects/loghunt/project__loghunt__03_hu_6be50b005d8c6356.png 1024w, https://rizzykun.github.io/projects/loghunt/project__loghunt__03.png 1584w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Pivoting on the attacker’s address"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+&gt;
+&lt;/p&gt;
+&lt;h2 id="mitre-attck-only-where-its-earned"&gt;&lt;a href="#mitre-attck-only-where-its-earned" class="header-anchor"&gt;&lt;/a&gt;MITRE ATT&amp;amp;CK, only where it&amp;rsquo;s earned
+&lt;/h2&gt;&lt;p&gt;22 techniques come out of the sample scenario. I only mapped a technique where
+log evidence actually supports it — it&amp;rsquo;s easy to inflate a coverage chart by
+attaching techniques a rule can&amp;rsquo;t really prove, and it makes investigations
+worse while making the screenshot look better.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/projects/loghunt/project__loghunt__04.png"
+width="1584"
+height="949"
+srcset="https://rizzykun.github.io/projects/loghunt/project__loghunt__04_hu_ee6a762aa4b1b27b.png 480w, https://rizzykun.github.io/projects/loghunt/project__loghunt__04_hu_bff5e57297e94922.png 1024w, https://rizzykun.github.io/projects/loghunt/project__loghunt__04.png 1584w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Technique and tactic coverage from one dataset"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+&gt;
+&lt;/p&gt;
+&lt;h2 id="what-it-cant-do"&gt;&lt;a href="#what-it-cant-do" class="header-anchor"&gt;&lt;/a&gt;What it can&amp;rsquo;t do
+&lt;/h2&gt;&lt;p&gt;Written down properly in the repo, because limitations you haven&amp;rsquo;t stated read
+like limitations you haven&amp;rsquo;t found:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Detection is threshold and signature based. &lt;strong&gt;No ML.&lt;/strong&gt; A patient attacker who
+stays under the thresholds goes unnoticed.&lt;/li&gt;
+&lt;li&gt;A signature match proves an &lt;em&gt;attempt&lt;/em&gt;. Confirming the SQL injection worked
+needs the application and database logs.&lt;/li&gt;
+&lt;li&gt;Correlation groups on IP and account. Change both between stages and the
+chain breaks; share a NAT address and unrelated activity merges.&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;sudo&lt;/code&gt; line in &lt;code&gt;auth.log&lt;/code&gt; carries no client IP, so on the IP page an
+attacker shows 0 privileged actions even though the alerts for those actions
+are listed directly below it. Inferring the session IP is possible but
+guesses wrong when sessions overlap, so I left it out rather than fake the
+attribution.&lt;/li&gt;
+&lt;li&gt;The sample data is synthetic. It measures the rules against a known scenario,
+not against real-world traffic.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next on the list: &lt;code&gt;.evtx&lt;/code&gt; and Sysmon parsing, Linux session reconstruction so
+sudo inherits its session&amp;rsquo;s source address, and Sigma rule import — the engine
+already separates rule logic from the schema, so that one should slot in.&lt;/p&gt;
+&lt;h2 id="why-this-one-next-to-the-fyp"&gt;&lt;a href="#why-this-one-next-to-the-fyp" class="header-anchor"&gt;&lt;/a&gt;Why this one, next to the FYP
+&lt;/h2&gt;&lt;p&gt;My &lt;a class="link" href="https://rizzykun.github.io/projects/idps-web-servers/" &gt;Final Year Project&lt;/a&gt; is a context-aware IDPS —
+it detects and prevents web attacks as they happen. LogHunt is the other half
+of that story: investigating the evidence an attack leaves behind.&lt;/p&gt;
+&lt;p&gt;One stops the request. The other reconstructs what the request was part of. I
+wanted both sides.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Built in Python with pandas, Streamlit and Plotly. 80 tests, including
+end-to-end tests against ground truth.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

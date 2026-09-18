@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Writeups on Rizzykun</title><link>https://rizzykun.github.io/writeups/</link><description>Recent content in Writeups on Rizzykun</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Oct 2025 01:45:47 +0000</lastBuildDate><atom:link href="https://rizzykun.github.io/writeups/index.xml" rel="self" type="application/rss+xml"/><item><title>Securinets CTF 2025: Preliminary</title><link>https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/</link><pubDate>Wed, 15 Oct 2025 01:45:47 +0000</pubDate><guid>https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/</guid><description>&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-01.png" alt="Featured image of post Securinets CTF 2025: Preliminary" /&gt;&lt;h1 id="securinets-ctf-2025-osint"&gt;&lt;a href="#securinets-ctf-2025-osint" class="header-anchor"&gt;&lt;/a&gt;Securinets CTF 2025 OSINT
+&lt;/h1&gt;&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-01.png"
+width="775"
+height="539"
+srcset="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-01_hu_e581dab9bd17c584.png 480w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-01.png 775w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="143"
+data-flex-basis="345px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, I quickly want to know, who Edmund is and I acquire that he is a game developer since 2000 era. &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-02.png"
+width="1158"
+height="984"
+srcset="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-02_hu_e1c620892888f4bd.png 480w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-02_hu_ecbeb958f4bdbc88.png 1024w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-02.png 1158w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="117"
+data-flex-basis="282px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So I asked chatgpt, what are famous website for game developer &amp;amp; speedrunner in the year 2000 , I go to each website and search his name.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-03.png"
+width="1600"
+height="900"
+srcset="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-03_hu_376dd7cc14adbb8b.png 480w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-03_hu_83cb5adae33e3908.png 1024w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-03.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I found his acc&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-04.png"
+width="1600"
+height="901"
+srcset="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-04_hu_bb6dbc016d379dc7.png 480w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-04_hu_d5d4d86abd3e9a78.png 1024w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-04.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Then, I try to search “speed”  in post section of his account&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-05.png"
+width="1600"
+height="900"
+srcset="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-05_hu_9ee6772fda7bb7bd.png 480w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-05_hu_f8909f3e90beef88.png 1024w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-05.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 5"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I found few related post.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-06.png"
+width="1600"
+height="900"
+srcset="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-06_hu_2566e5aa34ea7265.png 480w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-06_hu_f01de3159b29dd19.png 1024w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-06.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 6"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I believe the link mention is the website of the speedrun.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="http://gametrailers.com/gamepage.php?id=2057" target="_blank" rel="noopener"
+&gt;http://gametrailers.com/gamepage.php?id=2057&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, I try to open the link.&lt;/p&gt;
+&lt;p&gt;But, when I try to open the link, the page is invalid, so I try wayback&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-07.png"
+width="1144"
+height="735"
+srcset="https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-07_hu_33683795dc8ec3e.png 480w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-07_hu_cb5e11a55b298a80.png 1024w, https://rizzykun.github.io/p/securinet-ctf-2025-preliminary/img-07.png 1144w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 7"
+class="gallery-image"
+data-flex-grow="155"
+data-flex-basis="373px"
+&gt;
+&lt;/p&gt;</description></item><item><title>SUN CTF 2025: SOC Shift</title><link>https://rizzykun.github.io/p/soc-shift/</link><pubDate>Tue, 07 Oct 2025 01:45:49 +0000</pubDate><guid>https://rizzykun.github.io/p/soc-shift/</guid><description>&lt;img src="https://rizzykun.github.io/p/soc-shift/img-01.png" alt="Featured image of post SUN CTF 2025: SOC Shift" /&gt;&lt;p&gt;Challenge : SOC Shift&lt;/p&gt;
+&lt;p&gt;Open excel file, have like 10,000 lines . Filter by country ISO code MY&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/soc-shift/img-01.png"
+width="1919"
+height="985"
+srcset="https://rizzykun.github.io/p/soc-shift/img-01_hu_4198a34e4e827c.png 480w, https://rizzykun.github.io/p/soc-shift/img-01_hu_86753a5e753d9277.png 1024w, https://rizzykun.github.io/p/soc-shift/img-01.png 1919w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="194"
+data-flex-basis="467px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Find sus base64 , go cyberchef
+&lt;img src="https://rizzykun.github.io/p/soc-shift/img-02.png"
+width="1917"
+height="901"
+srcset="https://rizzykun.github.io/p/soc-shift/img-02_hu_54a00c93c40d8973.png 480w, https://rizzykun.github.io/p/soc-shift/img-02_hu_81f52e5c785dfc8a.png 1024w, https://rizzykun.github.io/p/soc-shift/img-02.png 1917w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="212"
+data-flex-basis="510px"
+&gt;
+Me get flag, me happy ;D&lt;/p&gt;
+&lt;p&gt;sunctf25{S1EM_b4s1cs_f0r_l0g_4n4Lys1s!}&lt;/p&gt;</description></item><item><title>SUN CTF 2025: Get Clawed</title><link>https://rizzykun.github.io/p/get-clawed/</link><pubDate>Tue, 07 Oct 2025 01:45:47 +0000</pubDate><guid>https://rizzykun.github.io/p/get-clawed/</guid><description>&lt;img src="https://rizzykun.github.io/p/get-clawed/img-03.png" alt="Featured image of post SUN CTF 2025: Get Clawed" /&gt;&lt;h1 id="sun-ctf-2025-forensic"&gt;&lt;a href="#sun-ctf-2025-forensic" class="header-anchor"&gt;&lt;/a&gt;SUN CTF 2025 Forensic
+&lt;/h1&gt;&lt;p&gt;Challenge : Get Clawed&lt;/p&gt;
+&lt;p&gt;Analyze a disk image and network traffic capture to uncover hidden data.&lt;/p&gt;
+&lt;p&gt;Open .pcap file find : &lt;/p&gt;
+&lt;p&gt;Suspicious HTTP GET traffic containing ?guid= stood out — indicative of possible C2-style communication.&lt;/p&gt;
+&lt;p&gt;REFERENCE : &lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://qiaonpc.github.io/post/get-clawed/" target="_blank" rel="noopener"
+&gt;https://qiaonpc.github.io/post/get-clawed/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://warlocksmurf.github.io/posts/cyberspacectf2024/" target="_blank" rel="noopener"
+&gt;https://warlocksmurf.github.io/posts/cyberspacectf2024/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Open disk, find sus: &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-01.png"
+width="1127"
+height="491"
+srcset="https://rizzykun.github.io/p/get-clawed/img-01_hu_b7917145a0aff23c.png 480w, https://rizzykun.github.io/p/get-clawed/img-01_hu_800ca52ba9dacb9e.png 1024w, https://rizzykun.github.io/p/get-clawed/img-01.png 1127w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="229"
+data-flex-basis="550px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Use c2 script get link : &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-02.png"
+width="1040"
+height="777"
+srcset="https://rizzykun.github.io/p/get-clawed/img-02_hu_9fa68185b1884c19.png 480w, https://rizzykun.github.io/p/get-clawed/img-02_hu_acb549b443f34839.png 1024w, https://rizzykun.github.io/p/get-clawed/img-02.png 1040w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="321px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://gist.githubusercontent.com/warlocksmurf/e19b5c0d8ab85e07573203ccaa6b39ef/raw/0b3ee0b5e7bc99bbbd4f618a6e025c6d4d6e3aee/sussy" target="_blank" rel="noopener"
+&gt;https://gist.githubusercontent.com/warlocksmurf/e19b5c0d8ab85e07573203ccaa6b39ef/raw/0b3ee0b5e7bc99bbbd4f618a6e025c6d4d6e3aee/sussy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Base64 it and get what to do with .clawed :&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-03.png"
+width="1533"
+height="858"
+srcset="https://rizzykun.github.io/p/get-clawed/img-03_hu_6a7db5eaf6bc623f.png 480w, https://rizzykun.github.io/p/get-clawed/img-03_hu_f163b8ff03e1341c.png 1024w, https://rizzykun.github.io/p/get-clawed/img-03.png 1533w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="178"
+data-flex-basis="428px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;We get the key, decrypt XOR, me can export png now :&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/get-clawed/img-04.png"
+width="643"
+height="363"
+srcset="https://rizzykun.github.io/p/get-clawed/img-04_hu_20c5c88c939cde8.png 480w, https://rizzykun.github.io/p/get-clawed/img-04.png 643w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="425px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Man see flag, man happy&lt;/p&gt;</description></item><item><title>Siber Siaga 2025: Finale</title><link>https://rizzykun.github.io/p/siber-siaga-2025-finale/</link><pubDate>Wed, 01 Oct 2025 09:14:47 +0000</pubDate><guid>https://rizzykun.github.io/p/siber-siaga-2025-finale/</guid><description>&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02.png" alt="Featured image of post Siber Siaga 2025: Finale" /&gt;&lt;h1 id="the-starting-point"&gt;&lt;a href="#the-starting-point" class="header-anchor"&gt;&lt;/a&gt;The Starting Point
+&lt;/h1&gt;&lt;p&gt;By Rizzykun&lt;/p&gt;
+&lt;p&gt;Category: OSINT&lt;/p&gt;
+&lt;p&gt;Description: &lt;/p&gt;
+&lt;p&gt;One of our agents managed to locate one of the suspects. We lost contact before he could tell us where he was. This snapshot was the only documentation he could send. Can you find where this place is?&lt;/p&gt;
+&lt;p&gt;Note: Use the google map name if you have found the location.&lt;/p&gt;
+&lt;p&gt;Flag format: SIBER25{main_street-town_name-state_name-country}&lt;/p&gt;
+&lt;p&gt;Answer:&lt;/p&gt;
+&lt;p&gt;Resource:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-01.png"
+width="683"
+height="822"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-01_hu_c9a92e20d74b35ec.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-01.png 683w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="83"
+data-flex-basis="199px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, this is the last place the suspect was seen, okay , Let’s lock in!!&lt;/p&gt;
+&lt;p&gt;First, we need to identify where is this place, maybe the shops could help?&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02.png"
+width="1252"
+height="872"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02_hu_f64a1b040a156117.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02_hu_3e1a1166eeb5fb5c.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-02.png 1252w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="143"
+data-flex-basis="344px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, he is near these shops. Let’s try locating every single store.&lt;/p&gt;
+&lt;p&gt;When googling each of the store names, almost every single one returns that it is a part of multiple branches of a store chain in Russia except for Клубника, салон фотопечати (Strawberry, Photo Printing Salon). This store is an independent and unique store, then, I find a city website named chaykovsky which holds info about the store.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03.png"
+width="1490"
+height="940"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03_hu_3c9fc7a21245c261.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03_hu_8d7f3fe655ada918.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-03.png 1490w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="158"
+data-flex-basis="380px"
+&gt;
+ &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04.png"
+width="1531"
+height="688"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04_hu_b32109e01463b566.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04_hu_c1c26591fc8e6e93.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-04.png 1531w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="534px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The website pinpoint the exact location of the store and give the address. Then, I enter the address in google Maps and it gave the result:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05.png"
+width="1452"
+height="854"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05_hu_12bd23c4edd2b138.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05_hu_9235c4e4d556c9df.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-finale/img-05.png 1452w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 5"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="408px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Then, we get the address , following the flag format we got : &lt;/p&gt;
+&lt;p&gt;SIBER25{ulitsa_sovetskaya-chaykovsky-perm_krai-russia}&lt;/p&gt;
+&lt;p&gt;The suspect was last seen located near mall named ТЦ (Мега).&lt;/p&gt;</description></item><item><title>Siber Siaga 2025: Preliminary</title><link>https://rizzykun.github.io/p/siber-siaga-2025-preliminary/</link><pubDate>Mon, 22 Sep 2025 11:45:47 +0000</pubDate><guid>https://rizzykun.github.io/p/siber-siaga-2025-preliminary/</guid><description>&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01.png" alt="Featured image of post Siber Siaga 2025: Preliminary" /&gt;&lt;h1 id="challenge-5--dumpster-diving"&gt;&lt;a href="#challenge-5--dumpster-diving" class="header-anchor"&gt;&lt;/a&gt;Challenge 5 : Dumpster Diving
+&lt;/h1&gt;&lt;p&gt;Solved by: Rizzykun&lt;/p&gt;
+&lt;p&gt;Description:&lt;/p&gt;
+&lt;p&gt;Aiya. I accidentally deleted the flag when cleaning up my Desktop.&lt;/p&gt;
+&lt;p&gt;Flag Format: SIBER25{flag} Zip Password: 0b20ca0c4860364140f51583e32bb28cdeecf13ebad62fd66b4f9786bf2c700d Challenge Creator: @identities&lt;/p&gt;
+&lt;p&gt;Answer : &lt;/p&gt;
+&lt;p&gt;Given an image file and .txt file. I immediately opened the image file using Exterro FTK Imager.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01.png"
+width="1600"
+height="900"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01_hu_dc3178cd9bfcb6cf.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01_hu_968c322a0a5214d8.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-01.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 1"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;As I was traversing through the image file, I found multiple image files in the recycle bin. When I click it to read as ASCII, I get the flag : &lt;/p&gt;
+&lt;p&gt;Flag = SIBER25{1OokiN6_foR_7R4ShED_1T3ms}&lt;/p&gt;
+&lt;h1 id="challenge-6--viewport"&gt;&lt;a href="#challenge-6--viewport" class="header-anchor"&gt;&lt;/a&gt;Challenge 6 : Viewport
+&lt;/h1&gt;&lt;p&gt;Solved by: Rizzykun&lt;/p&gt;
+&lt;p&gt;Description:&lt;/p&gt;
+&lt;p&gt;Oops. I accidentally deleted the flag when cleaning up my Desktop.&lt;/p&gt;
+&lt;p&gt;Flag Format: SIBER25{flag} Zip Password: e0ff450ab4c79a7810ad46b45f4b8f10678a63df866757566d17b8b998be4161 Challenge Creator: @identities&lt;/p&gt;
+&lt;p&gt;Answer : &lt;/p&gt;
+&lt;p&gt;Just like the Dumpster challenge, I quickly open the image file given using  Exterro FTK Imager. &lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-02.png"
+width="401"
+height="397"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-02.png 401w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 2"
+class="gallery-image"
+data-flex-grow="101"
+data-flex-basis="242px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I found out there were multiple interesting file directories, and when for looking.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-03.png"
+width="593"
+height="255"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-03_hu_5faf568b5f8b3f45.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-03.png 593w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 3"
+class="gallery-image"
+data-flex-grow="232"
+data-flex-basis="558px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;In the explorer folder, I noticed there are multiple deleted files. So I try to export them to my laptop and try to see it using tools named Thumb cache viewer.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04.png"
+width="1600"
+height="904"
+srcset="https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04_hu_676faeeafd434928.png 480w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04_hu_18e5e3dbbf8b3b91.png 1024w, https://rizzykun.github.io/p/siber-siaga-2025-preliminary/img-04.png 1600w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Screenshot 4"
+class="gallery-image"
+data-flex-grow="176"
+data-flex-basis="424px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I check every single file and I see the flag in an image. Then I merged all the info from all the images and got the flag.&lt;/p&gt;
+&lt;p&gt;Flag = SIBER25{V3RY_sMA1L_thUm8n411S}&lt;/p&gt;</description></item><item><title>SUN CTF 2025: Who's Alpha</title><link>https://rizzykun.github.io/p/osint-whos-alpha/</link><pubDate>Mon, 25 Aug 2025 09:14:47 +0000</pubDate><guid>https://rizzykun.github.io/p/osint-whos-alpha/</guid><description>&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/1.jpg" alt="Featured image of post SUN CTF 2025: Who's Alpha" /&gt;&lt;p&gt;Chall details&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Details&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Author&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;warlocksmurf &amp;amp; Sai&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Category&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;OSINT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Score&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;260&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;One of the largest financial institutions in Malaysia, &lt;strong&gt;MoneyPro Sdn Bhd&lt;/strong&gt;, has been breached by a notorious hacker group led by a mysterious figure known only as “Alpha.” As part of the &lt;strong&gt;Malaysia Cyber Defend Associate (MCDA)&lt;/strong&gt; team, your mission is to uncover Alpha’s true identity. Flag format: &lt;code&gt;sunctf25{Firstname_LastName}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;Interestingly this chall only had 4 out of 81 teams that were able to solve it in time.&lt;/p&gt;
+&lt;p&gt;The challenge shipped with an incident report on the MoneyPro breach: &lt;a class="link" href="investigation-report.pdf" &gt;Investigation Report (PDF)&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="-solution"&gt;&lt;a href="#-solution" class="header-anchor"&gt;&lt;/a&gt;🕵️‍♂️ Solution
+&lt;/h1&gt;&lt;p&gt;From the &lt;a class="link" href="https://github.com/Rizzykun/rizzykun.github.io/blob/master/content/post/2025/sunctf/osint/InvesigationReport.pdf" target="_blank" rel="noopener"
+&gt;Investigation Report&lt;/a&gt; given,
+The only lead we have is the social media account of a user named &lt;strong&gt;Bravo&lt;/strong&gt;. That’s where the OSINT trail begins..&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/1.jpg"
+width="794"
+height="717"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/1_hu_793e0eafeb50a87.jpg 480w, https://rizzykun.github.io/p/osint-whos-alpha/1.jpg 794w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image1"
+class="gallery-image"
+data-flex-grow="110"
+data-flex-basis="265px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="tracking-bravos-social-media"&gt;&lt;a href="#tracking-bravos-social-media" class="header-anchor"&gt;&lt;/a&gt;Tracking Bravo’s Social Media
+&lt;/h2&gt;&lt;p&gt;I searched through popular social platforms and eventually located Bravo’s &lt;strong&gt;X (Twitter)&lt;/strong&gt; account.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/2.png"
+width="1124"
+height="871"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/2_hu_1f382a9bbb463aaf.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/2_hu_92157f728a7c4ff2.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/2.png 1124w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image2"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="309px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Scrolling through his timeline revealed an interesting clue—a suspicious &lt;strong&gt;Google Drive link&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/3.png"
+width="1220"
+height="686"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/3_hu_bf80bfbcfb99afc4.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/3_hu_93fde82254107e46.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/3.png 1220w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image3"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="exploring-the-google-drive"&gt;&lt;a href="#exploring-the-google-drive" class="header-anchor"&gt;&lt;/a&gt;Exploring the Google Drive
+&lt;/h2&gt;&lt;p&gt;The Drive contained:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A folder full of &lt;strong&gt;logos&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;A file named &lt;code&gt;Private.zip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;Note.txt&lt;/code&gt; file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/4.png"
+width="1172"
+height="163"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/4_hu_74eeaaa9a3f97654.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/4_hu_83cf90fbbb5deda2.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/4.png 1172w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image4"
+class="gallery-image"
+data-flex-grow="719"
+data-flex-basis="1725px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Opening the note revealed a &lt;strong&gt;password hint&lt;/strong&gt;: it was a combination of Bravo’s mother’s name and an important day (the day he signed a &lt;strong&gt;RM10,000 contract&lt;/strong&gt;). Both details can be found in his X posts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="unlocking-the-zip"&gt;&lt;a href="#unlocking-the-zip" class="header-anchor"&gt;&lt;/a&gt;Unlocking the Zip
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/5.png"
+width="661"
+height="188"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/5_hu_247964f2db27f9a9.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/5.png 661w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image5"
+class="gallery-image"
+data-flex-grow="351"
+data-flex-basis="843px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;With the password reconstructed, I unzipped &lt;code&gt;Private.zip&lt;/code&gt; to find intelligence on the &lt;strong&gt;TigerP4tch&lt;/strong&gt; group. Inside Bravo’s folder, I finally uncovered a partial name:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Lucas M.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The hunt for his last name was on.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="following-charlies-trail"&gt;&lt;a href="#following-charlies-trail" class="header-anchor"&gt;&lt;/a&gt;Following Charlie’s Trail
+&lt;/h2&gt;&lt;p&gt;Inside Charlie’s folder, a chat log between Bravo and Charlie revealed another breadcrumb. Bravo hinted that something important was stored on &lt;strong&gt;Pastebin&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/6.png"
+width="1440"
+height="3200"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/6_hu_d5eb90a78808bb1.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/6_hu_c9f22be7608af493.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/6.png 1440w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image6"
+class="gallery-image"
+data-flex-grow="45"
+data-flex-basis="108px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="pastebin-recon"&gt;&lt;a href="#pastebin-recon" class="header-anchor"&gt;&lt;/a&gt;Pastebin Recon
+&lt;/h2&gt;&lt;p&gt;After some digging, I located a Pastebin account under the username &lt;code&gt;Alice_R&lt;/code&gt;. However, the paste was &lt;strong&gt;password-protected&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/7.png"
+width="1264"
+height="388"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/7_hu_e1af687b82eb60ea.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/7_hu_884b9cec9a305959.png 1024w, https://rizzykun.github.io/p/osint-whos-alpha/7.png 1264w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image7"
+class="gallery-image"
+data-flex-grow="325"
+data-flex-basis="781px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Back in the Google Drive folder full of logos, I noticed Alice’s shop logo featuring a &lt;strong&gt;rose&lt;/strong&gt;. The chat log mentioned the password is the flower on her shop logo. Trying &lt;strong&gt;rose&lt;/strong&gt; as the password worked, unlocking the paste.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/osint-whos-alpha/8.png"
+width="896"
+height="613"
+srcset="https://rizzykun.github.io/p/osint-whos-alpha/8_hu_444e05c880d7bd82.png 480w, https://rizzykun.github.io/p/osint-whos-alpha/8.png 896w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image8"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="350px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="the-final-reveal"&gt;&lt;a href="#the-final-reveal" class="header-anchor"&gt;&lt;/a&gt;The Final Reveal
+&lt;/h2&gt;&lt;p&gt;The unlocked paste finally exposed Alpha’s full name:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Lucas Moore&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;With that, Alpha’s identity was confirmed.&lt;/p&gt;</description></item><item><title>WHY CTF 2025: Shoe Shop</title><link>https://rizzykun.github.io/p/web-shoe-shop/</link><pubDate>Mon, 25 Aug 2025 09:14:47 +0000</pubDate><guid>https://rizzykun.github.io/p/web-shoe-shop/</guid><description>&lt;img src="https://rizzykun.github.io/p/web-shoe-shop/shoeshop.png" alt="Featured image of post WHY CTF 2025: Shoe Shop" /&gt;&lt;h2 id="-description"&gt;&lt;a href="#-description" class="header-anchor"&gt;&lt;/a&gt;📝 Description
+&lt;/h2&gt;&lt;p&gt;We just launched a brand-new &lt;a class="link" href="https://shoe-shop-1.ctf.zone/" target="_blank" rel="noopener"
+&gt;shoe store&lt;/a&gt; to sell some fancy kicks.
+Unfortunately, the admin beat us to it and already snagged the &lt;strong&gt;exclusive pair&lt;/strong&gt; in his cart. 👟✨
+But hey—feel free to explore the shop, try out the cart, and see what you can uncover.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-solution-walkthrough"&gt;&lt;a href="#-solution-walkthrough" class="header-anchor"&gt;&lt;/a&gt;💡 Solution Walkthrough
+&lt;/h2&gt;&lt;p&gt;We’re dealing with an online shoe store where you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sign up for an account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add items to your cart&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;View your cart contents&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pretty normal e-commerce flow, right? Or… is it? 👀&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/web-shoe-shop/shoeshop.png"
+width="1914"
+height="833"
+srcset="https://rizzykun.github.io/p/web-shoe-shop/shoeshop_hu_5e3ff98f48a94def.png 480w, https://rizzykun.github.io/p/web-shoe-shop/shoeshop_hu_ddd4484ee0fb2d9e.png 1024w, https://rizzykun.github.io/p/web-shoe-shop/shoeshop.png 1914w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+alt="Image1"
+class="gallery-image"
+data-flex-grow="229"
+data-flex-basis="551px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-the-idor-moment"&gt;&lt;a href="#-the-idor-moment" class="header-anchor"&gt;&lt;/a&gt;🔓 The IDOR Moment
+&lt;/h3&gt;&lt;p&gt;While browsing the cart, something caught my eye…
+The URL looked like this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;page=cart&amp;amp;id=694&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;That &lt;code&gt;id&lt;/code&gt; parameter smells suspicious. What if we tweak it? 🤔&lt;/p&gt;
+&lt;p&gt;So let’s try checking &lt;strong&gt;id #1 cart&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://shoe-shop-1.ctf.zone/index.php?page=cart&amp;amp;id=1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Bingo! 🎯 We just accessed another user’s cart. And guess who that is? Yep—the admin.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://rizzykun.github.io/p/web-shoe-shop/shoeshop2.png"
+width="694"
+height="206"
+srcset="https://rizzykun.github.io/p/web-shoe-shop/shoeshop2_hu_b184b87d3a10fd29.png 480w, https://rizzykun.github.io/p/web-shoe-shop/shoeshop2.png 694w" sizes="(min-width: 1024px) 800px, 100vw"
+loading="lazy"
+decoding="async"
+class="gallery-image"
+data-flex-grow="336"
+data-flex-basis="808px"
+&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-flag"&gt;&lt;a href="#-flag" class="header-anchor"&gt;&lt;/a&gt;🏁 Flag
+&lt;/h3&gt;&lt;p&gt;And there it is:
+&lt;code&gt;flag{00f34f9c417fcaa72b16f79d02d33099}&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;⚡Lesson learned: &lt;strong&gt;Always validate user access before showing sensitive data.&lt;/strong&gt;🚨&lt;/p&gt;</description></item></channel></rss>
