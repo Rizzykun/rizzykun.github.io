@@ -1,6 +1,6 @@
 # Sections that count as posts. The homepage is a landing hub (see
 # layouts/index.html) rather than a feed, but search and the widgets use this.
-mainSections = ["writeups", "homelab", "projects"]
+mainSections = ["writeups", "projects"]
 # Output page's full content in RSS.
 rssFullContent = true
 favicon = "/favicon.jpg"

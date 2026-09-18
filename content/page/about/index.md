@@ -30,7 +30,7 @@ I'm still a beginner (yes, expect some failure moments 🤦), but that's exactly
 - Writeups of CTF challenges I've solved 🕵️
 - My thought process (a.k.a. the chaos inside my head) 🤯
 - Lessons learned, mistakes made and "aha!" moments ✨
-- Homelab builds and the things I break along the way 🖥️
+- Security tools I build, and the things I break along the way 🖥️
 - Resources, tips and little tricks that I pick up 📚
 
 ---

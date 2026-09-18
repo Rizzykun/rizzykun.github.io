@@ -4,6 +4,5 @@
 # published and shared, and the section rename from `post` to `writeups` must
 # not break them.
 writeups = "/p/:slug/"
-homelab = "/homelab/:slug/"
 projects = "/projects/:slug/"
 page = "/:slug/"
